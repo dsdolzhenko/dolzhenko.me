@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>{% if page.data.title %}{{ page.data.title | escape }}{% else %}{{ site.title | escape }}{% endif %}{% if page.data.title and page.layout != 'home' %} - {{ site.title escape }}{% endif %}</title>
+        <meta name="description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}">
+    
+        <!-- Twitter cards metadatas -->
+        <meta name="twitter:card" content="summary">
+        <meta name="twitter:site" content="@dsdolzhenko">
+        <meta name="twitter:creator" content="@dsdolzhenko">
+        {% if page.data.title %}
+        <meta name="twitter:title" content="{{ page.data.title }}">
+        {% else %}
+        <meta name="twitter:title" content="{{ site.title }}">
+        {% endif %}
+        {% if page.url %}
+        <meta name="twitter:url" content="{{ site.url }}{{ page.url }}">
+        {% endif %}
+        {% if page.data.excerpt %}
+        <meta name="twitter:description" content="{{ page.data.excerpt }}">
+        {% else %}
+        <meta name="twitter:description" content="{{ site.description }}">
+        {% endif %}
+
+        <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>★</text></svg>">
+        <link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
+        <link rel="stylesheet" href="{{ '/assets/css/normalize.css' | relative_url }}">
+        <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+    </head>
+    <body>
+        <main class="page-content" aria-label="Content">
+            <div class="wrapper">
+                {{ content }}
+            </div>
+        </main>
+
+        <footer class="site-footer">
+            <div class="wrapper">
+                <span class="footer-copy">Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">Creative Commons Attribution 4.0 International License.</a> Please use <a href="mailto:mailbox@dolzhenko.me">email</a> to contact me.</span>
+            </div>
+        </footer>
+    </body>
+</html>

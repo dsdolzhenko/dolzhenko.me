@@ -1,0 +1,26 @@
+---
+layout: layout.liquid
+---
+
+<div class="home">
+
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">{{ title | escape }}</h1>
+  </header>
+
+  {{ content }}
+
+  <table class="post-list">
+    {% for post in collections.posts reversed %}
+    <tr>
+      <td>
+          <span class="post-meta">{{ post.date | date: "%b %d, %Y" }}</span>
+      </td>
+      <td class="post-list_star">{% if post.data.favorite %}<span class="star">★</span>{% endif %}</td>
+      <td>
+          <a class="post-link" href="{{ post.url | relative_url }}">{{ post.data.title | escape }}</a>
+      </td>
+    </tr>
+    {% endfor %}
+  </table>
+</div>
