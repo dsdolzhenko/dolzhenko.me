@@ -1,7 +1,6 @@
 ---
 title:    "First impressions of Clojure"
 date:     2018-01-28
-favorite: true
 ---
 
 I've spent the last several weeks learning and practicing with Clojure. And in this post, I would like to share my first impressions of the language and its ecosystem.

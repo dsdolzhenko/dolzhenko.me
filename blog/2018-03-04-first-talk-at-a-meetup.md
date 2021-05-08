@@ -1,7 +1,6 @@
 ---
 title:    "My first tech talk at a meetup (in Russian)"
 date:     2018-03-04
-favorite: true
 ---
 
 This year, on February 21 I gave my first tech talk at a meetup.

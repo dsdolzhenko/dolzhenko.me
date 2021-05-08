@@ -10,17 +10,13 @@ layout: layout.liquid
 
   {{ content }}
 
-  <table class="post-list">
+  <ul class="post-list">
     {% for post in collections.posts reversed %}
-    <tr>
-      <td>
-          <span class="post-meta">{{ post.date | date: "%b %d, %Y" }}</span>
-      </td>
-      <td class="post-list_star">{% if post.data.favorite %}<span class="star">★</span>{% endif %}</td>
-      <td>
-          <a class="post-link" href="{{ post.url | relative_url }}">{{ post.data.title | escape }}</a>
-      </td>
-    </tr>
+    <li class="post-list_item">
+      <a class="post-list_link" href="{{ post.url | relative_url }}">{{ post.data.title | escape }}</a>
+      <span class="post-list_dot"> • </span>
+      <span class="post-list_meta">{{ post.date | date: "%b %d, %Y" }}</span>
+    </li>
     {% endfor %}
   </table>
 </div>
