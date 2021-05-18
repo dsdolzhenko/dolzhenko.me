@@ -1,6 +1,6 @@
 ---
-title:    "Writing advice"
-date:     2020-05-16
+title: "Writing advice"
+date:  2020-05-16
 ---
 
 I want to share here a piece of advice on writing I've found on [Murat Demirbas' blog](http://muratbuffalo.blogspot.com/2010/09/writing-advice.html).

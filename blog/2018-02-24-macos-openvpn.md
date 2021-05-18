@@ -1,6 +1,6 @@
 ---
-title:    "How to block all non-VPN traffic on macOS"
-date:     2018-02-24
+title: "How to block all non-VPN traffic on macOS"
+date:  2018-02-24
 ---
 
 If you use OpenVPN (via thunnelblick or another client) on macOS, you probably know that neither in preference settings nor thunnelblick's settings there is no easy way to prohibit the use of the unsecured network before VPN connection is established. In this post, you are going to find one of the possible solutions to this problem.

@@ -1,6 +1,6 @@
 ---
-title:    Handling raw JSON values using Jackson
-date:     2017-08-13
+title: Handling raw JSON values using Jackson
+date:  2017-08-13
 ---
 
 Suppose that you have an application that gets some JSON value as input data, deserializes it, handles it in some way and then returns some other JSON value as a result. And now, suppose that in the input value there is a part that contains arbitrary JSON sub-object that you don't want to deserialize, but you want to include it in the result object.
