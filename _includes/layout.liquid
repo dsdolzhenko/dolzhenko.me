@@ -4,26 +4,16 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>{% if page.data.title %}{{ page.data.title | escape }}{% else %}{{ site.title | escape }}{% endif %}{% if page.data.title and page.layout != 'home' %} - {{ site.title escape }}{% endif %}</title>
-        <meta name="description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}">
+        <title>{% if title %}{{ title | escape }}{% else %}{{ site.title | escape }}{% endif %}{% if title and page.layout != 'home' %} - {{ site.title escape }}{% endif %}</title>
+        <meta name="description" content="{{ description | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}">
     
         <!-- Twitter cards metadatas -->
         <meta name="twitter:card" content="summary">
         <meta name="twitter:site" content="@dsdolzhenko">
         <meta name="twitter:creator" content="@dsdolzhenko">
-        {% if page.data.title %}
-        <meta name="twitter:title" content="{{ page.data.title }}">
-        {% else %}
-        <meta name="twitter:title" content="{{ site.title }}">
-        {% endif %}
-        {% if page.url %}
+        <meta name="twitter:title" content="{% if title %}{{ title | escape }}{% else %}{{ site.title | escape }}{% endif %}{% if title and page.layout != 'home' %} - {{ site.title escape }}{% endif %}">
         <meta name="twitter:url" content="{{ site.url }}{{ page.url }}">
-        {% endif %}
-        {% if page.data.excerpt %}
-        <meta name="twitter:description" content="{{ page.data.excerpt }}">
-        {% else %}
-        <meta name="twitter:description" content="{{ site.description }}">
-        {% endif %}
+        <meta name="twitter:description" content="{{ description | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}">
 
         <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>★</text></svg>">
         <link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
