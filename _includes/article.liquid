@@ -1,0 +1,19 @@
+---
+layout: layout.liquid
+---
+<article class="article" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="article-header">
+    <h1 class="article-title" itemprop="name headline">{{ title | escape }}</h1>
+    <p class="article-meta">
+      <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="dateModified">
+        {{ page.date | date: "%b %d, %Y" }}
+      </time>
+      • <a href="/" itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">Dmitry Dolzhenko</span></a>
+    </p>
+  </header>
+
+  <div class="article-content" itemprop="articleBody">
+    {{ content }}
+  </div>
+</article>
