@@ -2,4 +2,4 @@
 
 npx eleventy
 
-rsync -av _site/ user@dolzhenko.me:/var/www/dolzhenko.me/html/
+rsync -avh --delete-after _site/ user@dolzhenko.me:/var/www/dolzhenko.me/html/
