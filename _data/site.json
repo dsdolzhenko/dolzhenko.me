@@ -1,5 +1,15 @@
 {
     "title": "Dmitry Dolzhenko",
     "description": "Software Engineer, Distributed Systems Enthusiast, and Newbie Guitar Player",
-    "url": "http://dolzhenko.me"
+    "url": "http://dolzhenko.me",
+    "language": "en",
+    "author": {
+        "name": "Dmitry Dolzhenko",
+        "email": "mailbox@dolzhenko.me"
+    },
+    "feed": {
+        "filename": "feed.xml",
+        "path": "/feed.xml",
+        "id": "https://dolzhenko.me/"
+    }
 }

@@ -1,7 +1,10 @@
 ---
-title: On speeding up video upload at ok.ru
+title: Speed up video upload at ok.ru
 date:  2018-03-04
-tags:  [talks]
+tags:
+    - talks
+    - networks
+    - development
 ---
 
 In 2018, on February 21, I gave my first tech talk at a meetup (in Russian).

@@ -8,36 +8,24 @@ layout: layout.liquid
     <h1 class="article-title" itemprop="name headline">{{ site.title | escape }}</h1>
   </header>
 
+  <ul class="links-list">
+    <li class="links-list_item"><a href="mailto:mailbox@dolzhenko.me">Email</a></li>
+    <li class="links-list_item"><a href="https://github.com/dsdolzhenko">GitHub</a></li>
+    <li class="links-list_item"><a href="https://twitter.com/dsdolzhenko">Twitter</a></li>
+    <li class="links-list_item"><a href="https://www.linkedin.com/in/dmitry-dolzhenko-213087203/">LinkedIn</a></li>
+    <li class="links-list_item"><a href="{{ site.feed.path }}">RSS</a></li>
+  </ul>
+
   {{ content }}
 
-  <p>
-    <strong>Thoughts:</strong>
-  </p>
-
-  <ul>
-    {% for article in collections.thoughts reversed %}
-    <li><a href="{{ article.url | relative_url }}">{{ article.data.title | escape }}</a></li>
+  <ul class="post-list">
+    {% for post in collections.posts reversed %}
+    <li class="post-list_item">
+      <a class="post-list_link" href="{{ post.url | relative_url }}">{{ post.data.title | escape }}</a>
+      <span class="post-list_dot"> • </span>
+      <span class="post-list_meta">{{ post.date | date: "%b %d, %Y" }}</span>
+    </li>
     {% endfor %}
   </ul>
 
-  <p>
-    <strong>Talks:</strong>
-  </p>
-
-  <ul>
-    {% for article in collections.talks reversed %}
-    <li><a href="{{ article.url | relative_url }}">{{ article.data.title | escape }}</a></li>
-    {% endfor %}
-  </ul>
-
-  <p>
-    <strong>Contact:</strong>
-  </p>
-
-  <ul>
-    <li><a href="mailto:mailbox@dolzhenko.me">Email</a></li>
-    <li><a href="https://github.com/dsdolzhenko">GitHub</a></li>
-    <li><a href="https://twitter.com/dsdolzhenko">Twitter</a></li>
-    <li><a href="https://www.linkedin.com/in/dmitry-dolzhenko-213087203/">LinkedIn</a></li>
-  </ul>
 </div>
