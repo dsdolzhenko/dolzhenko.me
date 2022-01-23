@@ -8,6 +8,7 @@ eleventyExcludeFromCollections: true
   <subtitle>{{ site.description }}</subtitle>
   <link href="{{ site.url }}{{ site.feed.path }}" rel="self"/>
   <link href="{{ site.url }}"/>
+  <icon>{{ site.url }}/favicon.ico</icon>
   <updated>{{ collections.posts | getNewestCollectionItemDate | dateToRfc3339 }}</updated>
   <id>{{ site.url }}</id>
   <author>
