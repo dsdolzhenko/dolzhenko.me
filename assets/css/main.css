@@ -11,7 +11,7 @@ body { font: 400 16px/1.6 Verdana, sans-serif; color: #586e75; background-color:
 /** Set `margin-bottom` to maintain vertical rhythm */
 h1, h2, h3, h4, h5, h6, p, blockquote, pre, ul, ol, dl, figure, .highlight { margin-bottom: 15px; }
 
-a { color: #268bd2 }
+a, a:active, a:visited { color: #268bd2 }
 
 /** Images */
 img { max-width: 100%; vertical-align: middle; }
