@@ -60,9 +60,7 @@ pre > code { border: 0; padding-right: 0; padding-left: 0; }
 
 .post-list { margin: 30px 0 0 0; list-style: none; }
 .post-list_item { margin-bottom: 10px; }
-.post-list_link {}
 @media screen and (max-width: 800px) { .post-list_link { display: block; } }
-.post-list_dot {}
 @media screen and (max-width: 800px) { .post-list_dot { display: none; } }
 .post-list_meta { color: var(--bqc); white-space: nowrap; }
 
