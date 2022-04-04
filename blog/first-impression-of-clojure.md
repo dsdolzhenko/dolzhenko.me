@@ -4,6 +4,7 @@ date:  2018-01-28
 tags:
     - clojure
     - development
+archived: true
 ---
 
 I've spent the last several weeks learning and practicing with Clojure. And in this post, I would like to share my first impressions of the language and its ecosystem.
