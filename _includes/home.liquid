@@ -10,16 +10,4 @@ layout: layout.liquid
 
   {{ content }}
 
-  <ul class="post-list">
-    {% for post in collections.posts reversed %}
-    {% if post.data.archived != true %}
-    <li class="post-list_item">
-      <a class="post-list_link" href="{{ post.url | relative_url }}">{{ post.data.title | escape }}</a>
-      <span class="post-list_dot"> • </span>
-      <span class="post-list_meta">{{ post.date | date: "%b %d, %Y" }}</span>
-    </li>
-    {% endif %}
-    {% endfor %}
-  </ul>
-
 </div>

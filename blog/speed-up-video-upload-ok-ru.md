@@ -5,7 +5,6 @@ tags:
     - talks
     - networks
     - development
-archived: true
 ---
 
 In 2018, on February 21, I gave my first tech talk at a meetup (in Russian).
