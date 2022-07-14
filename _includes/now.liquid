@@ -1,0 +1,37 @@
+---
+layout: layout.liquid
+---
+<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  {% if index %}
+    {% assign current = collections.now | last %}
+  {% else %}
+    {% assign current = collections.now | where: "date", page.date | last %}
+  {% endif %}
+
+  {% render "header", title: current.data.title, date: current.date %}
+
+  <div class="post-content" itemprop="articleBody">
+    {{ current.templateContent }}
+  </div>
+
+  {% comment %}
+  <h3 class="post-list-title">
+  {%- if index -%}
+  Previous updates
+  {%- else -%}
+  Other updates
+  {%- endif -%}
+  </h3>
+
+  <ul class="post-list">
+    {% for update in collections.now reversed %}
+    {% if update.date != current.date %}
+    <li class="post-list_item">
+      <a class="post-list_link" href="{{ update.url | url }}">{{ update.date | date: "%b %d, %Y" }}</a>
+    </li>
+    {% endif %}
+    {% endfor %}
+  </ul>
+  {% endcomment %}
+</article>

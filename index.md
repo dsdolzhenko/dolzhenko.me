@@ -8,5 +8,7 @@ As you can guess my name is Dmitry Dolzhenko. I'm a father, husband, and softwar
 
 In my spare time, you may catch me hanging out with my family, experimenting with a new coffee brewing method, trying out a new recipe, learning how to play the guitar, or reading a book. Sometimes, I like to mess around with tech stuff.
 
+If you're interested what I'm currently up to, check out my [now](/now) page.
+
 You can follow me on [Mastodon](https://mastodon.online/web/@dsdolzhenko)
 or [Twitter](https://twitter.com/dsdolzhenko), connect with me at [LinkedIn](https://www.linkedin.com/in/dmitry-dolzhenko-213087203/), or write me an email to [mailbox@dolzhenko.me](mailto:mailbox@dolzhenko.me).
