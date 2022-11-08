@@ -10,5 +10,5 @@ In my spare time, you may catch me hanging out with my family, experimenting wit
 
 If you're interested what I'm currently up to, check out my [now](/now) page.
 
-You can follow me on [Mastodon](https://mastodon.online/web/@dsdolzhenko)
+You can follow me on <a rel="me" href="https://fosstodon.org/@dsdolzhenko">Mastodon</a>
 or [Twitter](https://twitter.com/dsdolzhenko), connect with me at [LinkedIn](https://www.linkedin.com/in/dmitry-dolzhenko-213087203/), or write me an email to [mailbox@dolzhenko.me](mailto:mailbox@dolzhenko.me).
