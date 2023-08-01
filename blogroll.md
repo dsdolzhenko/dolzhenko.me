@@ -10,6 +10,10 @@ Here are my favorite blogs I enjoy reading regularly.
 
 Emacs Tips and Hacks.
 
+# [Marc Brooker](https://brooker.co.za/blog/)
+
+Software Engineering, System Design.
+
 # [Sacha Chua](https://sachachua.com/blog/)
 
 Emacs hacks, tips and community news.
