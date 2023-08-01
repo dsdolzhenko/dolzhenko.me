@@ -1,7 +1,7 @@
 ---
 layout: post.liquid
 title:  Blogroll
-date:   2022-11-11
+date:   2023-08-01
 ---
 
 Here are my favorite blogs I enjoy reading regularly.
