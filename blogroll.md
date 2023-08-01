@@ -14,6 +14,10 @@ Emacs Tips and Hacks.
 
 Software Engineering, System Design.
 
+# [Robert Krahn](https://robert.kra.hn/)
+
+Emacs, Rust, Software Engineering.
+
 # [Sacha Chua](https://sachachua.com/blog/)
 
 Emacs hacks, tips and community news.
