@@ -1,0 +1,18 @@
+# Ignore all HTML files:
+**/*.html
+
+# Ignore git files
+**/.git
+
+# Ignore deps
+**/node_modules
+
+# Ignore dist
+**/_site
+
+# Ignore *.md
+**/*.md
+
+# Ingore package.json
+**/package.json
+**/package-lock.json
