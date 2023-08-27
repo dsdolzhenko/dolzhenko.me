@@ -9,7 +9,7 @@ layout: layout.liquid
     {% assign current = collections.now | where: "date", page.date | last %}
   {% endif %}
 
-  {% render "header", title: current.data.title, date: current.date %}
+  {% render "header", title: current.data.title, date: current.date, site: site %}
 
   <div class="post-content" itemprop="articleBody">
     {{ current.templateContent }}

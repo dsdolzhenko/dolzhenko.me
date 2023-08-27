@@ -3,7 +3,7 @@ layout: layout.liquid
 ---
 <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
 
-  {% render "header", title: title, date: page.date %}
+  {% render "header", title: title, date: page.date, site: site %}
 
   <div class="post-content" itemprop="articleBody">
     {{ content }}
