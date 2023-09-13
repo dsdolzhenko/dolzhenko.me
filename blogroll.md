@@ -29,3 +29,7 @@ Hacking.
 # [Kev Quirk](https://kevquirk.com/)
 
 IndiWeb, Blogging, Books, Casio Watches.
+
+# [Rudimentary Lathe](https://rudimentarylathe.org/)
+
+A blog about everything by Jack Baty. Emacs, Photography, Blogging, Personal.
