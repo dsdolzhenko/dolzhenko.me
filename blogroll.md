@@ -26,6 +26,10 @@ Emacs hacks, tips and community news.
 
 Hacking.
 
+# [JT's blog](https://www.jntrnr.com/)
+
+Programming Languages, Open Source, Rust, Personal.
+
 # [Kev Quirk](https://kevquirk.com/)
 
 IndiWeb, Blogging, Books, Casio Watches.
