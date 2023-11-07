@@ -2,14 +2,10 @@
   "name": "dolzhenko.me",
   "description": "",
   "private": true,
-  "main": "index.js",
-  "scripts": {
-    "build": "eleventy",
-    "deploy": "scp -r _site/* dolzhenko@dolzhenko.dev:/var/www/dolzhenko.dev"
-  },
   "devDependencies": {
     "@11ty/eleventy": "^2.0.0",
     "@11ty/eleventy-plugin-rss": "^1.2.0",
-    "prettier": "3.0.2"
+    "prettier": "3.0.2",
+    "slugify-cli": "^3.0.0"
   }
 }
