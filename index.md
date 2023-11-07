@@ -1,5 +1,6 @@
 ---
-layout: home.liquid
+layout: page.liquid
+title: Home
 ---
 
 Hi there 👋! Welcome to my little internet garden - a place where I publish thoughts, stories and ideas of mine.

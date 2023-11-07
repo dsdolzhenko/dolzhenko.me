@@ -34,9 +34,7 @@ figure {
 }
 
 body {
-    font:
-        400 16px/1.6 Verdana,
-        sans-serif;
+    font: 400 16px/1.6 Verdana, Geneva, sans-serif;
     color: var(--tc);
     background-color: var(--bgc);
     font-kerning: normal;
@@ -56,6 +54,7 @@ ol,
 dl,
 figure,
 .highlight {
+    margin-top: 15px;
     margin-bottom: 15px;
 }
 
@@ -63,6 +62,7 @@ a,
 a:active,
 a:visited {
     color: var(--sc);
+    text-decoration: none;
 }
 
 img {
@@ -95,6 +95,15 @@ h4,
 h5,
 h6 {
     font-weight: 600;
+    font-size: 1rem;
+}
+
+h1 {
+    font-size: 1.3rem;
+}
+
+h2 {
+    font-size: 1.1rem;
 }
 
 blockquote {
@@ -128,25 +137,81 @@ pre > code {
     padding-left: 0;
 }
 
-.wrapper {
+time {
+    font-style: italic;
+}
+
+body {
     max-width: calc(800px - (30px * 2));
     margin-right: auto;
     margin-left: auto;
-    padding-right: 30px;
-    padding-left: 30px;
+    padding: 15px;
 }
+
 @media screen and (max-width: 800px) {
-    .wrapper {
+    body {
         max-width: calc(800px - (30px));
-        padding-right: 15px;
-        padding-left: 15px;
+        padding: 15px;
     }
 }
 
-.wrapper:after {
-    content: "";
-    display: table;
-    clear: both;
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.header .title h1 {
+    font-size: 1.7rem;
+}
+
+.header .title {
+    display: flex;
+    align-items: center;
+}
+
+.header .title img {
+    width: 42px;
+    height: 42px;
+    margin-right: 15px;
+    border-radius: 10px;
+}
+
+.header nav {
+    display: flex;
+    gap: 15px;
+}
+
+.content header h1 {
+    font-size: 1.5rem;
+    margin-bottom: 0;
+}
+
+.content header {
+    padding-bottom: 15px;
+}
+
+.content header time {
+    color: var(--bqc);
+}
+
+ul.posts {
+    list-style-type: none;
+    padding: unset;
+    margin-left: 0;
+}
+
+ul.posts li {
+    display: flex;
+}
+
+ul.posts li span {
+    flex: 0 0 130px;
+}
+
+ul.posts li time {
+    color: var(--bqc);
 }
 
 .site-footer {
@@ -157,96 +222,4 @@ pre > code {
     font-size: 15px;
     color: var(--bqc);
     font-style: italic;
-}
-
-.page-content {
-    margin-top: 30px;
-}
-
-.links-list {
-    display: inline-flex;
-    list-style: none;
-    margin: 0;
-}
-.links-list_item:after {
-    content: "|";
-    padding: 0 5px;
-}
-.links-list_item:last-child:after {
-    content: "";
-}
-
-.post-list-title {
-    margin-top: 30px;
-}
-
-.post-list {
-    margin: 0 0 0 0;
-    list-style: none;
-}
-.post-list_item {
-    margin-bottom: 10px;
-}
-@media screen and (max-width: 800px) {
-    .post-list_link {
-        display: block;
-    }
-}
-@media screen and (max-width: 800px) {
-    .post-list_dot {
-        display: none;
-    }
-}
-.post-list_meta {
-    color: var(--bqc);
-    white-space: nowrap;
-}
-
-.post-meta {
-    color: var(--bqc);
-}
-.post-header {
-    margin-bottom: 30px;
-}
-.post-title {
-    font-size: 28px;
-    letter-spacing: -1px;
-    line-height: 1;
-}
-@media screen and (max-width: 800px) {
-    .post-title {
-        font-size: 24px;
-    }
-}
-
-.post-content h2 {
-    font-size: 24px;
-}
-@media screen and (max-width: 800px) {
-    .post-content h2 {
-        font-size: 18px;
-    }
-}
-.post-content h3 {
-    font-size: 18px;
-}
-@media screen and (max-width: 800px) {
-    .post-content h3 {
-        font-size: 16px;
-    }
-}
-.post-content h4 {
-    font-size: 16px;
-}
-@media screen and (max-width: 800px) {
-    .post-content h4 {
-        font-size: 16px;
-    }
-}
-
-.ukraine-banner {
-    text-align: center;
-    color: #005bbb;
-    background-color: #ffd500;
-    padding: 5px;
 }

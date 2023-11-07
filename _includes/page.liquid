@@ -1,8 +1,11 @@
 ---
 layout: layout.liquid
 ---
+
 <article class="content">
-  {% render "header", title: title, date: page.date, site: site %}
+  <header>
+    <h1>{{ title | escape }}</h1>
+  </header>
 
   {{ content }}
 </article>

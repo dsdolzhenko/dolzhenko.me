@@ -1,39 +1,45 @@
 <!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>{% if title %}{{ title | escape }}{% else %}{{ site.title | escape }}{% endif %}{% if title and page.layout != 'home' %} - {{ site.title | escape }}{% endif %}</title>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% if title %}{{ title | escape }}{% else %}{{ site.title | escape }}{% endif %}{% if title and page.layout != 'home' %} - {{ site.title | escape }}{% endif %}</title>
 
-        <meta name="og:title" content="{% if title %}{{ title | escape }}{% else %}{{ site.title | escape }}{% endif %}{% if title and page.layout != 'home' %} - {{ site.title | escape }}{% endif %}">
-        <meta name="description" content="{{ description | default: site.description | strip_html | truncate: 160 | escape }}">
-        <meta name="og:description" content="{{ description | default: site.description | strip_html | truncate: 160 | escape }}">
+    <meta name="og:title" content="{% if title %}{{ title | escape }}{% else %}{{ site.title | escape }}{% endif %}{% if title and page.layout != 'home' %} - {{ site.title | escape }}{% endif %}">
+    <meta name="description" content="{{ description | default: site.description | strip_html | truncate: 160 | escape }}">
+    <meta name="og:description" content="{{ description | default: site.description | strip_html | truncate: 160 | escape }}">
 
-        <meta name="twitter:card" content="summary">
+    <meta name="twitter:card" content="summary">
 
-        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
 
-        <link rel="canonical" href="{{ site.url }}{{ page.url | replace:'index.html','' | url }}">
-        <link rel="stylesheet" href="{{ '/assets/css/main.css' | url }}" async>
-        <link rel="alternate" type="application/rss+xml" title="{{ site.title | escape }}" href="{{ site.feed.path }}" />
-    </head>
-    <body>
-        <div class="ukraine-banner">
-            🇺🇦 <a href="https://standforukraine.com">Support Ukraine</a> in the face of Russian aggression.
-        </div>
+    <link rel="canonical" href="{{ site.url }}{{ page.url | replace:'index.html','' | url }}">
+    <link rel="stylesheet" href="{{ '/assets/css/main.css' | url }}" async>
+    <link rel="alternate" type="application/rss+xml" title="{{ site.title | escape }}" href="{{ site.feed.path }}" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="title">
+        <img src="/assets/img/avatar.jpeg"/>
+        <h1>{{ site.title | escape }}</h1>
+      </div>
 
-        <main class="page-content" aria-label="Content">
-            <div class="wrapper">
-                {{ content }}
-            </div>
-        </main>
+      <nav>
+        <a href="/">🏡 Home</a>
+        <a href="/blog">✏️ Blog</a>
+        <a href="/now">📆 Now</a>
+        <a href="/blogroll">🦉 Blogroll</a>
+      </nav>
+    </header>
 
-        <footer class="site-footer">
-            <div class="wrapper">
-                <span class="footer-copy">Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">Creative Commons Attribution 4.0 International License.</a></span>
-            </div>
-        </footer>
-    </body>
+    <main>
+      {{ content }}
+    </main>
+
+    <footer class="site-footer">
+      <span class="footer-copy">Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">Creative Commons Attribution 4.0 International License.</a></span>
+    </footer>
+  </body>
 </html>

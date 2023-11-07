@@ -1,5 +1,5 @@
 ---
-layout: post.liquid
+layout: page.liquid
 title:  Blogroll
 date:   2023-08-01
 ---

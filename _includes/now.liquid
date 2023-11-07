@@ -1,33 +1,36 @@
 ---
 layout: layout.liquid
 ---
-<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
-
+<article class="content">
   {% if index %}
     {% assign current = collections.now | last %}
   {% else %}
     {% assign current = collections.now | where: "date", page.date | last %}
   {% endif %}
 
-  {% render "header", title: current.data.title, date: current.date, site: site %}
+  {% render "header", title: current.data.title, date: current.date, site: site, meta: true %}
 
-  <div class="post-content" itemprop="articleBody">
-    {{ current.templateContent }}
-  </div>
+  {{ current.templateContent }}
+</article>
 
-  <h3 class="post-list-title">
-  {%- if index -%}
-  Previous updates
-  {%- else -%}
-  Other updates
-  {%- endif -%}
-  </h3>
+<article>
+  <h1>
+    {%- if index -%}
+    Previous updates
+    {%- else -%}
+    Other updates
+    {%- endif -%}
+  </h1>
 
-  <ul class="post-list">
-    {% for update in collections.now reversed %}
-    {% if update.date != current.date %}
-    <li class="post-list_item">
-      <a class="post-list_link" href="{{ update.url | url }}">{{ update.date | date: "%b %d, %Y" }}</a>
+  <ul class="posts">
+    {% for post in collections.now reversed %}
+    {% if post.date != current.date %}
+    <li>
+      <a href="{{ post.url | url }}">
+        <time datetime="{{ post.date | date: '%Y%m%d' }}">
+          {{ post.date | date: "%b %d, %Y" }}
+        </time>
+      </a>
     </li>
     {% endif %}
     {% endfor %}

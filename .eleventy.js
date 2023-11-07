@@ -5,6 +5,7 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.setDataDeepMerge(true);
     eleventyConfig.addPassthroughCopy({
         "assets/css": "/assets/css",
+        "assets/img": "/assets/img",
         "assets/favicons": "/",
     });
 };
