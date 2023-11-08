@@ -8,6 +8,7 @@ tags:
 ---
 
 What is the best way to restart a blog if not by joining a recent trend in blogosphere for fun.
+---
 
 I first saw this on [Kev Quirk's blog](https://kevquirk.com/my-default-apps-at-the-end-of-2023), but it all started with ["Duel of the Defaults!"](https://listen.hemisphericviews.com/097) episode of [Hemispheric Views](https://listen.hemisphericviews.com/) podcast:
 
