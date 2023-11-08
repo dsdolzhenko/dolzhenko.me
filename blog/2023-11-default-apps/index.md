@@ -47,5 +47,6 @@ And some extra categories not mentioned in the podcast:
 - 🧮 Code Editor: Emacs
 - 👨‍💻 Code Hosting: GitHub
 - 👨🏻‍💻 Terminal: iTerm
+- 🛜 VPN: ProtonVPN
 
 Checkout [Robb Knight's page](https://defaults.rknight.me/) with the list of people who are joining in.
