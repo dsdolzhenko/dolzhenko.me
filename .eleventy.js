@@ -8,6 +8,7 @@ module.exports = function (eleventyConfig) {
         "assets/img": "/assets/img",
         "assets/favicons": "/",
     });
+    eleventyConfig.addPassthroughCopy("**/*.jpg");
     eleventyConfig.setFrontMatterParsingOptions({
         excerpt: true,
     });
