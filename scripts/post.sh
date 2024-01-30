@@ -5,8 +5,10 @@ set -e
 DATE=$(date +"%Y-%m-%d")
 echo "date: ${DATE}"
 read -p "title: " TITLE
-SLUG=$(npx slugify-cli "${TITLE}")
-POST_DIR="${BASH_SOURCE%/*}"/../blog/$DATE-$SLUG
+DEFAULT_SLUG=$(npx slugify-cli "${TITLE}")
+read -p "slug [$DEFAULT_SLUG}]: " SLUG
+SLUG=${SLUG:-${DEFAULT_SLUG}}
+POST_DIR="${BASH_SOURCE%/*}"/../blog/$(date +"%Y")/$(date +"%m")/$SLUG
 POST=$POST_DIR/index.md
 
 if [[ ! -f $POST ]]; then
@@ -15,7 +17,6 @@ if [[ ! -f $POST ]]; then
 ---
 date:  ${DATE}
 title: ${TITLE}
-slug: ${SLUG}
 ---
 EOL
 fi

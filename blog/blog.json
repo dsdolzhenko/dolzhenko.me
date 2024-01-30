@@ -1,5 +1,4 @@
 {
     "layout": "post.liquid",
-    "tags": ["blog"],
-    "permalink": "blog/{{ page.date | date: '%Y' }}/{{ page.date | date: '%m' }}/{{ title | slugify }}/index.html"
+    "tags": ["blog"]
 }
