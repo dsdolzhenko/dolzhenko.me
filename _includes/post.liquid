@@ -4,6 +4,16 @@ layout: layout.liquid
 <article class="content">
   {% render "header", title: title, date: page.date, site: site %}
 
+  {% if pictures %}
+  <ul class="pictures">
+  {% for picture in pictures %}
+     <li>
+     <a href="{{ picture }}"><img src="{{ picture }}"/></a>
+     </li>
+  {% endfor %}
+  </ul>
+  {% endif %}
+
   {{ content }}
 </article>
 

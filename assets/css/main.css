@@ -196,6 +196,31 @@ body {
     color: var(--bqc);
 }
 
+ul.pictures {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+
+    list-style: none;
+    margin: 0
+}
+
+ul.pictures > li {
+    height: 20vh;
+    flex-grow: 1;
+}
+
+ul.pictures img {
+    max-height: 100%;
+    min-width: 100%;
+    object-fit: cover;
+    vertical-align: bottom;
+}
+
+ul.pictures li:last-child {
+  flex-grow: 10;
+}
+
 ul.posts {
     list-style-type: none;
     padding: unset;
