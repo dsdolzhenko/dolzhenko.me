@@ -2,7 +2,7 @@
 
 set -e
 
-DATE=$(date +"%Y-%m-%d")
+DATE=$(date -Iminutes -u)
 echo "date: ${DATE}"
 read -p "title: " TITLE
 DEFAULT_SLUG=$(npx slugify-cli "${TITLE}")
