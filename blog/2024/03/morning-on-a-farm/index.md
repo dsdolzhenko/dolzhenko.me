@@ -2,10 +2,10 @@
 date:  2024-03-09
 title: Morning on a farm
 pictures:
-  - img_5717.jpeg
-  - img_5720.jpeg
-  - img_5723.jpeg
-  - img_5718.jpeg
+  - path: img_5717.jpeg
+  - path: img_5720.jpeg
+  - path: img_5723.jpeg
+  - path: img_5718.jpeg
 ---
 
 There are at least four open farms within a 30-minute bike ride from us. This Saturday, we went to one of them for the first time since winter.

@@ -16,13 +16,16 @@
     <meta name="og:description" content="{{ page.excerpt | default: description | default: site.description | strip_html | truncate: 160 | escape | strip }}">
     <meta name="og:type" content="website" />
     <meta name="og:url" content="{{ site.url }}{{ page.url | replace:'index.html','' | url }}">
+    {% if image %}
+    <meta name="og:image" content="{% og_image_uri image %}">
+    {% endif %}
 
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
 
     <link rel="canonical" href="{{ site.url }}{{ page.url | replace:'index.html','' | url }}">
-    <link rel="stylesheet" href="{{ '/assets/css/main.css?v=2' | url }}" async>
+    <link rel="stylesheet" href="{{ '/assets/css/main.css?v=3' | url }}" async>
     <link rel="alternate" type="application/rss+xml" title="{{ site.title | escape }}" href="{{ site.feed.path }}" />
   </head>
   <body>

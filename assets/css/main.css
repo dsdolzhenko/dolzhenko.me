@@ -197,6 +197,38 @@ body {
 }
 
 ul.pictures {
+    display: grid;
+    grid-template-rows: 20vh 20vh;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 5px;
+    row-gap: 5px;
+
+    list-style: none;
+    margin: 0
+}
+
+ul.pictures li {
+    justify-self: stretch;
+}
+
+ul.pictures img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    vertical-align: bottom;
+}
+
+ul.pictures li.vertical {
+    grid-row: auto / span 2;
+}
+
+ul.pictures li.left-top img {
+    object-position: left top;
+}
+
+/*
+ul.pictures {
     display: flex;
     flex-wrap: wrap;
     gap: 5px;
@@ -204,6 +236,7 @@ ul.pictures {
     list-style: none;
     margin: 0
 }
+
 
 ul.pictures > li {
     height: 20vh;
@@ -220,6 +253,8 @@ ul.pictures img {
 ul.pictures li:last-child {
   flex-grow: 10;
 }
+*/
+
 
 ul.posts {
     list-style-type: none;
@@ -237,6 +272,29 @@ ul.posts li span {
 
 ul.posts li time {
     color: var(--bqc);
+}
+
+.blogroll {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.blogroll article {
+    box-sizing: border-box;
+    width: 365px;
+    flex-grow: 1;
+    padding: 10px;
+
+    border-bottom: 1px solid var(--bqc);
+}
+
+.blogroll article h1 {
+    margin: 0 0 10px 0;
+}
+
+.blogroll-discover {
+    text-align: center;
 }
 
 .site-footer {
