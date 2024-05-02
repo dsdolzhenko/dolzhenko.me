@@ -17,11 +17,11 @@ module.exports = function (eleventyConfig) {
         return metadata.jpeg[0].url;
     });
 
-    eleventyConfig.addShortcode("image", async function(src, alt, sizes) {
+    eleventyConfig.addShortcode("picture", async function(src, alt, sizes) {
         let { url } = this.page;
 
         let metadata = await Image("." + url + src, {
-            widths: [300, 600],
+            widths: [300, 740],
             formats: ["avif", "jpeg"],
             urlPath: url,
             outputDir: `./_site/${url}`

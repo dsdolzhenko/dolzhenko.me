@@ -9,7 +9,7 @@ layout: layout.liquid
   {% for picture in pictures %}
      <li class="{% if picture.vertical %}vertical{% else %}horizontal{% endif %} {{ picture.position | default: "center" }}">
      <a href="{{ picture.path }}">
-       {% image picture.path, picture.alt %}
+       {% picture picture.path, picture.alt %}
      </a>
      </li>
   {% endfor %}
