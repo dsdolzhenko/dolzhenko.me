@@ -9,7 +9,7 @@ layout: layout.liquid
     {% for post in collections.blog reversed %}
     <li>
       <span>
-        <time datetime="{{ post.date | date: '%Y%m%d' }}">
+        <time datetime="{{ post.date | date: '%Y-%m-%d' }}">
           {{ post.date | date: "%b %d, %Y" }}
         </time>
       </span>

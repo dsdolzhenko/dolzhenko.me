@@ -1,7 +1,7 @@
 <header>
   <h1>{{ title | escape }}</h1>
   {%- if date -%}
-    <time datetime="{{ date | date: '%Y%m%d' }}">
+    <time datetime="{{ date | date: '%Y-%m-%d' }}">
       {{ date | date: "%b %d, %Y" }}
     </time>
   {%- endif -%}
