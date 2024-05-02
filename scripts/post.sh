@@ -4,9 +4,9 @@ set -e
 
 DATE=$(date -Iminutes -u)
 echo "date: ${DATE}"
-read -p "title: " TITLE
+read -e -p "title: " TITLE
 DEFAULT_SLUG=$(npx slugify-cli "${TITLE}")
-read -p "slug [${DEFAULT_SLUG}]: " SLUG
+read -e -p "slug [${DEFAULT_SLUG}]: " SLUG
 SLUG=${SLUG:-${DEFAULT_SLUG}}
 POST_DIR="${BASH_SOURCE%/*}"/../blog/$(date +"%Y")/$(date +"%m")/$SLUG
 POST=$POST_DIR/index.md
