@@ -4,7 +4,7 @@ title: Three months with a mechanical keyboard
 slug: mechanical-keyboard
 ---
 
-![Keychrone K8](keyboard.jpg)
+<a href="keyboard.jpeg">{% picture "keyboard.jpeg", "Keychrone K8" %}</a>
 
 Even though I use a laptop as my main work computer, the lid is usually closed while the laptop is connected to an external monitor and a keyboard. And for a long time I was a happy Apple Magic Keyboard user. Until this summer, when I impulsively ordered my first mechanical keyboard.
 
