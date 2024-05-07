@@ -4,18 +4,6 @@ layout: layout.liquid
 <article class="content">
   {% render "header", title: title, date: page.date, site: site %}
 
-  {% if pictures %}
-  <ul class="pictures">
-  {% for picture in pictures %}
-     <li class="{% if picture.vertical %}vertical{% else %}horizontal{% endif %} {{ picture.position | default: "center" }}">
-     <a href="{{ picture.path }}">
-       {% picture picture.path, picture.alt %}
-     </a>
-     </li>
-  {% endfor %}
-  </ul>
-  {% endif %}
-
   {{ content }}
 </article>
 

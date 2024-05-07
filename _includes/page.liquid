@@ -3,9 +3,11 @@ layout: layout.liquid
 ---
 
 <article class="content">
+  {% if title %}
   <header>
     <h1>{{ title | escape }}</h1>
   </header>
+  {% endif %}
 
   {{ content }}
 </article>
