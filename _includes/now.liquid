@@ -27,8 +27,8 @@ layout: layout.liquid
     {% if post.date != current.date %}
     <li>
       <a href="{{ post.url | url }}">
-        <time datetime="{{ post.date | date: '%Y%m%d' }}">
-          {{ post.date | date: "%b %d, %Y" }}
+        <time datetime="{{ post.date | date: '%Y-%m-%d' }}">
+          {{ post.date | date: "%d %b, %Y" }}
         </time>
       </a>
     </li>
