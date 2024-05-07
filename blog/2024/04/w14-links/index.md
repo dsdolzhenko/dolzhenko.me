@@ -5,7 +5,7 @@ title: Links from last week (#1)
 
 Here are a few links to things I found interesting last week.
 
-## [emacs] [Text Expansion with Hippie Expand](https://www.masteringemacs.org/article/text-expansion-hippie-expand)
+## [Text Expansion with Hippie Expand](https://www.masteringemacs.org/article/text-expansion-hippie-expand) {% tags "emacs" %}
 
 One of the cool things about Emacs is that you can always learn something new
 
@@ -13,10 +13,10 @@ There is a well known Emacs feature called [Abbrevs](https://www.gnu.org/softwar
 which allows you to expand a single character or a short series of characters into different text.
 
 However, there's another feature, about which I wasn't aware before, called ["Hippie" Expansion](https://www.gnu.org/software/emacs/manual/html_node/autotype/Hippie-Expand.html#Hippie-Expand).
-It allows to dynamically expand typed text into a number of things, including abbrevs (configured with `hippie-expand-try-functions-list`).
+It allows to dynamically expand typed text into a number of things, including abbrevs (configured with 'hippie-expand-try-functions-list').
 File names, Lisp symbols, kill ring content, whole lines, command arguments in eshell are just a few examples.
 
-## [emacs] [org-toggle-narrow-to-subtree](https://taonaw.com/2024/04/03/another-little-gem.html)
+## [org-toggle-narrow-to-subtree](https://taonaw.com/2024/04/03/another-little-gem.html) {% tags "emacs" %}
 
 Another neat little feature of Emacs is narrowing.
 With it, you can narrow a buffer to a particular part of it, giving the illusion that you're editing a file consisting solely of that part.
@@ -29,14 +29,14 @@ For instance, if you have an org document containing your ongoing projects and a
 The only nuisance of the feature is the necessity of using an additional command or key binding to widen the buffer back to its original state.
 However, it turns out that org mode offers a special command that enables toggling narrowing with just a single key binding.
 
-## [tools] [ast-grep(sg)](https://ast-grep.github.io/)
+## [ast-grep(sg)](https://ast-grep.github.io/) {% tags "tools" %}
 
 > ast-grep(sg) is a fast and polyglot tool for code structural search, lint, rewriting at large scale.
 
 At work, I mostly code in Kotlin and use Intellij IDEA, which supports structured search and replace out of the box.
 It's nice to see that there now a tool that is not bound to a particular IDE or a language.
 
-## [osdev] [Unikraft](https://unikraft.org/)
+## [Unikraft](https://unikraft.org/) {% tags "osdev" %}
 
 > Unikraft is a fast, secure and open-source Unikernel Development Kit
 
@@ -47,7 +47,7 @@ It looks very mature, with good documentation, plenty of examples, and an easy-t
 
 This week, the company behind it also [launched a cloud platform](https://unikraft.io/blog/kraftcloud/) to host unikernels built with the kit.
 
-## [blogs] [Elizabeth Goodspeed on the importance of taste – and how to acquire it](https://www.itsnicethat.com/articles/elizabeth-goodspeed-column-taste-technology-art-280224)
+## [Elizabeth Goodspeed on the importance of taste – and how to acquire it](https://www.itsnicethat.com/articles/elizabeth-goodspeed-column-taste-technology-art-280224) {% tags "blogs" %}
 
 > It's not enough to be able to draw or design anymore. Now you need to have taste.
 

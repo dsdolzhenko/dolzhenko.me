@@ -4,6 +4,11 @@ const Image = require("@11ty/eleventy-img");
 module.exports = function (eleventyConfig) {
     eleventyConfig.addPlugin(pluginRss);
 
+    eleventyConfig.addShortcode("tags", function(value) {
+        let tags = value.split(",").map((tag) => '#' + tag.trim()).join(', ');
+        return `<span class="tags">${tags}</span>`;
+    });
+
     eleventyConfig.addShortcode("og_image_uri", async function(src) {
         let { url } = this.page;
 
@@ -34,7 +39,6 @@ module.exports = function (eleventyConfig) {
             decoding: "async",
         };
 
-        // You bet we throw an error on a missing alt (alt="" works okay)
         return Image.generateHTML(metadata, imageAttributes);
     });
 
