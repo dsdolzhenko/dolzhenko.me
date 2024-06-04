@@ -1,0 +1,112 @@
+{
+    "blogs": [
+        {
+            "title": "Jack Baty",
+            "url": "https://baty.net",
+            "feed": "https://baty.net/feed",
+            "description": "Jack writes about photography, writing, software, and web technologies"
+        },
+        {
+            "title": "Niki Tonsky",
+            "url": "https://tonsky.me",
+            "feed": "https://tonsky.me/atom.xml",
+            "description": "Nikita shares his critical thoughts on programming and UI design"
+        },
+        {
+            "title": "Chris McLeod",
+            "url": "https://chrismcleod.dev",
+            "feed": "https://chrismcleod.dev/feed.xml",
+            "description": "Chris is a software developer writing about blogging, indieweb, and programming"
+        },
+        {
+            "title": "Cory Dransfeldt",
+            "url": "https://coryd.dev",
+            "feed": "https://feedpress.me/coryd.json",
+            "description": "Cory is a software developer from Camarillo, California that enjoys hanging out with his beautiful family and 4 rescue dogs, technology, automation, music, writing, reading, tv and movies"
+        },
+        {
+            "title": "Rach Smith",
+            "url": "https://rachsmith.com",
+            "feed": "https://rachsmith.com/feed.xml",
+            "description": "Rach is a frontend developer writing about programming, productivity, mothering, and more"
+        },
+        {
+            "title": "Jacob Kaplan-Moss",
+            "url": "https://jacobian.org",
+            "feed": "https://jacobian.org/index.xml",
+            "description": "Jacob is a software developer and co-creator of Django framework writing about people management, productivity, enineering"
+        },
+        {
+            "title": "Jamie Thingelstad",
+            "url": "https://www.thingelstad.com",
+            "feed": "https://www.thingelstad.com/feed.json",
+            "description": "Jamie is a technologist, leader, and family man with expertise in software, architecture, business, who actively contributes to the tech community"
+        },
+        {
+            "title": "Sophia June Turner",
+            "url": "https://www.sophiajt.com/",
+            "feed": "https://www.sophiajt.com/atom.xml",
+            "description": "Sophia is a software engineer with an expertise in programming languages"
+        },
+        {
+            "title": "Julia Evans",
+            "url": "https://jvns.ca",
+            "feed": "https://jvns.ca/atom.xml",
+            "description": "Julia blogs about tech, hacking, and programming. She is the author of beautiful <a href=\"https://wizardzines.com/\" target=\"_blank\">wizard zines</a>"
+        },
+        {
+            "title": "Kev Quirk",
+            "url": "https://kevquirk.com",
+            "feed": "https://kevquirk.com/feed",
+            "description": "Keving blogs about indieweb, watches, and bikes"
+        },
+        {
+            "title": "Manuel Moreale",
+            "url": "https://manuelmoreale.com",
+            "feed": "https://manuelmoreale.com/feed/rss",
+            "description": "Manuel is a freelance developer and designer writing about blogging, indieweb, and more. He is a person behind <a href=\"https://peopleandblogs.com/\" target=\"_blank\">People and Blogs</a> newsletter"
+        },
+        {
+            "title": "Marc Brooker",
+            "url": "http://brooker.co.za/blog",
+            "feed": "https://brooker.co.za/blog/rss.xml",
+            "description": "Mark is an engineer at AWS, writing about engineering, system design and distributed computing"
+        },
+        {
+            "title": "Robb Knight",
+            "url": "https://rknight.me",
+            "feed": "https://rknight.me/feed.xml",
+            "description": "Robb has just an amazing website. He is a person behind many cool projects, including <a href=\"https://echofeed.app/\" target=\"_blank\">EchoFeed</a>"
+        },
+        {
+            "title": "Robin Rendle",
+            "url": "https://robinrendle.com",
+            "feed": "https://robinrendle.com/feed.xml",
+            "description": "Designer and writer, in his blog he experiments with storytelling and browsers, rants about typography, and works in public"
+        },
+        {
+            "title": "Sacha Chua",
+            "url": "https://sachachua.com",
+            "feed": "https://sachachua.com/blog/feed/index.xml",
+            "description": "Sacha is an active member of Emacs community. She regularly publishes news from the community and shares her Emacs hacks and tricks."
+        },
+        {
+            "title": "Sara Joy",
+            "url": "https://sarajoy.dev",
+            "feed": "https://sarajoy.dev/rss.xml",
+            "description": "Sara is a web developer passionate about accessibility."
+        },
+        {
+            "title": "JTR",
+            "url": "https://taonaw.com",
+            "feed": "https://taonaw.com/feed.xml",
+            "description": "JTR is another fellow Emacs hacker, that also writes about internet, blogging, and movies."
+        },
+        {
+            "title": "Herman Martinus",
+            "url": "https://herman.bearblog.dev",
+            "feed": "https://herman.bearblog.dev/feed/?type=rss",
+            "description": "Herman is the creator of bearblog.dev blogging platform and many other cool projects. He writes about his journey as a solo-creator, blogging, and writing."
+        }
+    ]
+}
