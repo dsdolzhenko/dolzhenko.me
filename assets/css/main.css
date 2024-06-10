@@ -238,22 +238,21 @@ body {
     color: var(--secondary-text-color);
 }
 
-ul.pictures {
+.pictures {
     display: grid;
     grid-template-rows: 20vh 20vh;
     grid-template-columns: 1fr 1fr;
     column-gap: 5px;
     row-gap: 5px;
 
-    list-style: none;
     margin: 10px 0 10px 0;
 }
 
-ul.pictures li {
+.pictures li {
     justify-self: stretch;
 }
 
-ul.pictures img {
+.pictures img {
     height: 100%;
     width: 100%;
     object-fit: cover;
@@ -261,11 +260,11 @@ ul.pictures img {
     vertical-align: bottom;
 }
 
-ul.pictures li.vertical {
+.pictures .vertical {
     grid-row: auto / span 2;
 }
 
-ul.pictures li.left-top img {
+.pictures .left-top img {
     object-position: left top;
 }
 
