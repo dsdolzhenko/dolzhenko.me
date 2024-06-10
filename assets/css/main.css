@@ -246,7 +246,7 @@ ul.pictures {
     row-gap: 5px;
 
     list-style: none;
-    margin: 0 0 10px 0;
+    margin: 10px 0 10px 0;
 }
 
 ul.pictures li {
