@@ -8,8 +8,15 @@
         "email": "mailbox@dolzhenko.me"
     },
     "feed": {
-        "filename": "feed.xml",
-        "path": "/feed.xml",
-        "id": "https://dolzhenko.me/"
+        "xml": {
+            "filename": "feed.xml",
+            "path": "/feed.xml",
+            "id": "https://dolzhenko.me"
+        },
+        "json": {
+            "filename": "feed.json",
+            "path": "/feed.json",
+            "id": "https://dolzhenko.me"
+        }
     }
 }

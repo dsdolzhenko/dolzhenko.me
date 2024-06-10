@@ -9,8 +9,8 @@ module.exports = function (eleventyConfig) {
         return `<span class="tags">${tags}</span>`;
     });
 
-    eleventyConfig.addShortcode("og_image_uri", async function(src) {
-        let { url } = this.page;
+    eleventyConfig.addShortcode("og_image_uri", async function(page, src) {
+        let { url } = page;
 
         let metadata = await Image("." + url + src, {
             widths: [600],
