@@ -1,6 +1,7 @@
 ---
 date:  2024-05-02T09:45+00:00
 title: Spent a lovely morning working in the fresh air
+color: green
 image: pond.jpeg
 ---
 

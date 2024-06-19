@@ -1,6 +1,7 @@
 ---
 date:  2024-06-18T22:00+00:00
 title: Homemade gelato in Stadshart Amstelveen
+color: pistache
 tags:
   - kids
   - family

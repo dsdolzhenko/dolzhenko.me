@@ -1,6 +1,7 @@
 ---
 date:  2024-03-09
 title: Morning on a farm
+color: hay
 pictures:
   - path: img_5717.jpeg
   - path: img_5720.jpeg

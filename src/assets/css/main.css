@@ -1,4 +1,4 @@
-* {
+body {
     --primary-text-color: #586e75;
     --secondary-text-color: #839496;
     --link-text-color: cornflowerblue;
@@ -8,6 +8,24 @@
 
     --header-margin: 1em;
     --content-margin: 0.5em;
+}
+
+body.pistache {
+    /* https://www.color-hex.com/color-palette/53770 */
+    --main-bg-color: #cceec7;
+    --link-text-color: #95c58e;
+}
+
+body.green {
+    /* https://www.color-hex.com/color-palette/20674 */
+    --main-bg-color: #aad688;
+    --link-text-color: #47894b;
+}
+
+body.hay {
+    /* https://www.color-hex.com/color-palette/100642 */
+    --main-bg-color: #f6d36a;
+    --link-text-color: #c25d0f;
 }
 
 body,

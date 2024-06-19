@@ -1,6 +1,7 @@
 ---
 date:  2024-06-08T14:34+00:00
 title: Cuddled with baby goats on a farm
+color: hay
 tags:
   - farm
   - animals
