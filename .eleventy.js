@@ -22,14 +22,12 @@ module.exports = function (eleventyConfig) {
         return metadata.jpeg[0].url;
     });
 
-    eleventyConfig.addShortcode("picture", async function(src, alt, sizes) {
-        let { url } = this.page;
-
-        let metadata = await Image("./src/" + url + src, {
+    async function generateImageHTML(basePath, src, alt, sizes) {
+        let metadata = await Image("./src/" + basePath + src, {
             widths: [300, 740],
             formats: ["avif", "jpeg"],
-            urlPath: url,
-            outputDir: `./dist/${url}`
+            urlPath: basePath,
+            outputDir: `./dist/${basePath}`
         });
 
         let imageAttributes = {
@@ -40,6 +38,22 @@ module.exports = function (eleventyConfig) {
         };
 
         return Image.generateHTML(metadata, imageAttributes);
+    }
+
+    eleventyConfig.addShortcode("image", async function(src, alt, sizes) {
+        return generateImageHTML(this.page.url, src, alt, sizes);
+    });
+
+    eleventyConfig.addShortcode("picture", async function(src, alt, caption, sizes) {
+        let imageHTML = await generateImageHTML(this.page.url, src, alt, sizes);
+
+        return `
+<figure class="picture">
+  <a href="${src}">
+    ${imageHTML}
+  </a>
+  ${ !caption ? '' : `<figcaption>${caption}</figcaption>` }
+</figure>`;
     });
 
     eleventyConfig.setDataDeepMerge(true);

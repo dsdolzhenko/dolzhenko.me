@@ -9,7 +9,7 @@ tags:
   - site
 ---
 
-{% render "picture", picture: picture, page: page %}
+{% picture "uptime.png", "Output of the uptime command displaying 300 days of uptime", "You served me well, but it's time to say goodbye" %}
 
 I've relocated this website to a new server. They old one served well, but it was too beefy and expensive to serve such a small web-site.
 We used to play Minecraft and I hosted a server for it there, but it's been idle for a long time now.
