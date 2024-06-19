@@ -4,4 +4,4 @@ set -e
 
 cd "${BASH_SOURCE%/*}"/..
 
-rsync -razP --delete _site/ dolzhenko@dolzhenko.dev:/var/www/dolzhenko.dev
+rsync -razP --delete _site/ dolzhenko@dolzhenko.dev:/var/www/dolzhenko.me
