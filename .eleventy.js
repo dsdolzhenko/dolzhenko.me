@@ -12,11 +12,11 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addShortcode("og_image_uri", async function(page, src) {
         let { url } = page;
 
-        let metadata = await Image("." + url + src, {
+        let metadata = await Image("./src/" + url + src, {
             widths: [600],
             formats: ["jpeg"],
             urlPath: url,
-            outputDir: `./_site/${url}`
+            outputDir: `./dist/${url}`
         });
 
         return metadata.jpeg[0].url;
@@ -25,11 +25,11 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addShortcode("picture", async function(src, alt, sizes) {
         let { url } = this.page;
 
-        let metadata = await Image("." + url + src, {
+        let metadata = await Image("./src/" + url + src, {
             widths: [300, 740],
             formats: ["avif", "jpeg"],
             urlPath: url,
-            outputDir: `./_site/${url}`
+            outputDir: `./dist/${url}`
         });
 
         let imageAttributes = {
@@ -44,12 +44,21 @@ module.exports = function (eleventyConfig) {
 
     eleventyConfig.setDataDeepMerge(true);
     eleventyConfig.addPassthroughCopy({
-        "assets/css": "/assets/css",
-        "assets/img": "/assets/img",
-        "assets/favicons": "/",
+        "src/assets/css": "/assets/css",
+        "src/assets/img": "/assets/img",
+        "src/assets/favicons": "/",
     });
     eleventyConfig.addPassthroughCopy("blog/**/*.(jp(e|)g|png)");
     eleventyConfig.setFrontMatterParsingOptions({
         excerpt: true,
     });
+
+    return {
+        dir: {
+            input: "src",
+            includes: "includes",
+            data: "data",
+            output: "dist"
+        }
+    };
 };
