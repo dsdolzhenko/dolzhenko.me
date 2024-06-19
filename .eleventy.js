@@ -48,7 +48,7 @@ module.exports = function (eleventyConfig) {
         "src/assets/img": "/assets/img",
         "src/assets/favicons": "/",
     });
-    eleventyConfig.addPassthroughCopy("blog/**/*.(jp(e|)g|png)");
+    eleventyConfig.addPassthroughCopy("src/blog/**/*.(jp(e|)g|png)");
     eleventyConfig.setFrontMatterParsingOptions({
         excerpt: true,
     });
