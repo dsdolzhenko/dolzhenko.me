@@ -3,11 +3,11 @@ layout: page.liquid
 title: Dmitry Dolzhenko
 ---
 
-Hi there 👋! Welcome to my little internet corner, where I publish thoughts, stories and ideas of mine.
+Hi there 👋! Welcome to my little corner of the internet, where I publish my stories, thoughts and ideas.
 
-As you can guess my name is Dmitry. I'm a father, husband, and software engineer living in The Netherlands, Amsterdam.
+As you can guess my name is Dmitry. I'm a father, husband, and software engineer living in The Netherlands, Amstelveen.
 
-In my spare time, you may catch me hanging out with my family, experimenting with a new coffee brewing method, trying out a new recipe, learning how to play the guitar, or reading a book. Sometimes, I like to mess around with tech stuff.
+In my free time, you'll often find me hanging out with family, experimenting with new coffee brewing methods, trying out new recipes, learning guitar, or diving into a good book. Occasionally, I like to tinker with tech stuff too.
 
 If you're interested what I'm currently up to, check out my [now](/now) page.
 
