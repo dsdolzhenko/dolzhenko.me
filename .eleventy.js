@@ -7,13 +7,13 @@ const { DateTime } = require("luxon");
 function dateFilter(date, format) {
     if (date instanceof Date) {
         return DateTime.fromJSDate(date, {
-            zone: 'utc',
-            locale: 'en'
+            zone: "utc",
+            locale: "en"
         }).toFormat(format);
     } else {
         return DateTime.fromISO(date, {
-            zone: 'utc',
-            locale: 'en'
+            zone: "utc",
+            locale: "en"
         }).toFormat(format);
     }
 }
@@ -37,13 +37,13 @@ function takeFilter(posts, n) {
 module.exports = function (eleventyConfig) {
     eleventyConfig.addPlugin(pluginRss);
 
-    eleventyConfig.addFilter('date', dateFilter);
-    eleventyConfig.addFilter('groupByYear', groupByYearFilter);
-    eleventyConfig.addFilter('where', whereFilter);
-    eleventyConfig.addFilter('take', takeFilter);
+    eleventyConfig.addFilter("date", dateFilter);
+    eleventyConfig.addFilter("groupByYear", groupByYearFilter);
+    eleventyConfig.addFilter("where", whereFilter);
+    eleventyConfig.addFilter("take", takeFilter);
 
     eleventyConfig.addShortcode("tags", function(value) {
-        let tags = value.split(",").map((tag) => '#' + tag.trim()).join(', ');
+        let tags = value.split(",").map((tag) => "#" + tag.trim()).join(", ");
         return `<span class="tags">${tags}</span>`;
     });
 
@@ -90,7 +90,7 @@ module.exports = function (eleventyConfig) {
   <a href="${src}">
     ${imageHTML}
   </a>
-  ${ !caption ? '' : `<figcaption>${caption}</figcaption>` }
+  ${ !caption ? "" : `<figcaption>${caption}</figcaption>` }
 </figure>`;
     });
 
@@ -106,9 +106,9 @@ module.exports = function (eleventyConfig) {
     });
 
     return {
-        markdownTemplateEngine: 'njk',
-        dataTemplateEngine: 'njk',
-        htmlTemplateEngine: 'njk',
+        markdownTemplateEngine: "njk",
+        dataTemplateEngine: "njk",
+        htmlTemplateEngine: "njk",
         dir: {
             input: "src",
             includes: "includes",
