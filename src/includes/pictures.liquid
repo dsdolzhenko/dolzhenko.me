@@ -1,9 +1,0 @@
-<div class="pictures">
-  {% for picture in pictures %}
-  <div class="{% if picture.vertical %}vertical{% else %}horizontal{% endif %} {{ picture.position | default: "center" }}">
-    <a href="{{ picture.path }}">
-      {% image picture.path, picture.alt %}
-    </a>
-  </div>
-  {% endfor %}
-</div>

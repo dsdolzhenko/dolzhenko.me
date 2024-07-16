@@ -10,7 +10,7 @@ pictures:
     position: left-top
 ---
 
-{% render "pictures", pictures: pictures, page: page %}
+{% include 'pictures.njk' %}
 
 This Sunday afternoon, [I run my first 10K](https://www.athlinks.com/event/376780/results/Event/1075473/Course/2451919/Bib/6640) in an big running event.
 

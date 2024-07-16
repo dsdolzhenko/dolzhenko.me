@@ -1,8 +1,46 @@
 const pluginRss = require("@11ty/eleventy-plugin-rss");
 const Image = require("@11ty/eleventy-img");
 
+const _ = require("lodash");
+const { DateTime } = require("luxon");
+
+function dateFilter(date, format) {
+    if (date instanceof Date) {
+        return DateTime.fromJSDate(date, {
+            zone: 'utc',
+            locale: 'en'
+        }).toFormat(format);
+    } else {
+        return DateTime.fromISO(date, {
+            zone: 'utc',
+            locale: 'en'
+        }).toFormat(format);
+    }
+}
+
+function groupByYearFilter(posts) {
+    return _.chain(posts)
+        .groupBy((post) => post.date.getFullYear())
+        .toPairs()
+        .reverse()
+        .value();
+}
+
+function whereFilter(posts, attr, value) {
+    return _.filter(posts, (post) => post[attr] === value);
+}
+
+function takeFilter(posts, n) {
+    return _.take(posts, n)
+}
+
 module.exports = function (eleventyConfig) {
     eleventyConfig.addPlugin(pluginRss);
+
+    eleventyConfig.addFilter('date', dateFilter);
+    eleventyConfig.addFilter('groupByYear', groupByYearFilter);
+    eleventyConfig.addFilter('where', whereFilter);
+    eleventyConfig.addFilter('take', takeFilter);
 
     eleventyConfig.addShortcode("tags", function(value) {
         let tags = value.split(",").map((tag) => '#' + tag.trim()).join(', ');
@@ -12,7 +50,7 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addShortcode("og_image_uri", async function(page, src) {
         let { url } = page;
 
-        let metadata = await Image("./src/" + url + src, {
+        let metadata = await Image("./src" + url + src, {
             widths: [600],
             formats: ["jpeg"],
             urlPath: url,
@@ -23,7 +61,7 @@ module.exports = function (eleventyConfig) {
     });
 
     async function generateImageHTML(basePath, src, alt, sizes) {
-        let metadata = await Image("./src/" + basePath + src, {
+        let metadata = await Image("./src" + basePath + src, {
             widths: [300, 740],
             formats: ["avif", "jpeg"],
             urlPath: basePath,
@@ -62,17 +100,20 @@ module.exports = function (eleventyConfig) {
         "src/assets/img": "/assets/img",
         "src/assets/favicons": "/",
     });
-    eleventyConfig.addPassthroughCopy("src/blog/**/*.(jp(e|)g|png)");
+    eleventyConfig.addPassthroughCopy("src/**/*.(jp(e|)g|png)");
     eleventyConfig.setFrontMatterParsingOptions({
         excerpt: true,
     });
 
     return {
+        markdownTemplateEngine: 'njk',
+        dataTemplateEngine: 'njk',
+        htmlTemplateEngine: 'njk',
         dir: {
             input: "src",
             includes: "includes",
             data: "data",
-            output: "dist"
-        }
+            output: "dist",
+        },
     };
 };

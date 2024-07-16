@@ -6,7 +6,11 @@
     "@11ty/eleventy": "^2.0.0",
     "@11ty/eleventy-img": "4.0.2",
     "@11ty/eleventy-plugin-rss": "^1.2.0",
+    "lodash": "4.17.21",
     "prettier": "3.0.2",
     "slugify-cli": "^3.0.0"
+  },
+  "dependencies": {
+    "luxon": "3.4.4"
   }
 }

@@ -1,0 +1,17 @@
+{% extends 'layout.njk' %}
+
+{% from 'macros.njk' import header %}
+
+{% block main %}
+    <article class="content">
+        {% block title %}
+            {% if title %}
+                {{ header(title, date) }}
+            {% endif %}
+        {% endblock %}
+
+        {% block content %}
+            {{ content | safe }}
+        {% endblock %}
+    </article>
+{% endblock %}

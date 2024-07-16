@@ -1,0 +1,28 @@
+{% extends "page.njk" %}
+{% from "macros.njk" import header, svg, time %}
+
+{% block content %}
+    {% for year, posts in collections.blog | groupByYear %}
+        <h2>{{ year }}</h2>
+        <ul class="posts">
+            {% for post in posts | reverse %}
+                <li>
+                    <span>
+                        {{ time(post.date, "LLL d") }}
+                    </span>
+                    <a href="{{ post.url | url }}">{{ post.data.title | escape }}</a>
+                </li>
+            {% endfor %}
+        </ul>
+    {% endfor %}
+{% endblock %}
+
+{% block footer %}
+    <div class="links">
+        <a href="/feed.xml">
+            {{ svg("rss") }}
+
+            Subscribe via RSS
+        </a>
+    </div>
+{% endblock %}

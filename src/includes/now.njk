@@ -1,0 +1,39 @@
+{% extends "layout.njk" %}
+
+{% from "macros.njk" import header, time %}
+
+{% block main %}
+    <article class="content">
+        {% if index %}
+            {% set current = collections.now | last %}
+        {% else %}
+            {% set current = collections.now | where("date", page.date) | last %}
+        {% endif %}
+
+        {{ header(current.data.title, current.date) }}
+
+        {{ current.templateContent | safe }}
+    </article>
+
+    <article>
+        <h2>
+            {% if index %}
+                Previous updates
+            {% else %}
+                Other updates
+            {% endif %}
+        </h2>
+
+        <ul class="posts now">
+            {% for post in collections.now %}
+                {% if post.date != current.date %}
+                    <li>
+                        <a href="{{ post.url | url }}">
+                            {{ time(post.date) }}
+                        </a>
+                    </li>
+                {% endif %}
+            {% endfor %}
+        </ul>
+    </article>
+{% endblock %}

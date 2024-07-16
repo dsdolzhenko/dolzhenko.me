@@ -23,4 +23,4 @@ pictures:
 
 This Saturday went all together with some friends to [a goat farm nearby](https://www.openstreetmap.org/#map=19/52.31299/4.82459) to cuddle and feed baby goats and grab a snack with coffee.
 
-{% render "pictures", pictures: pictures, page: page %}
+{% include 'pictures.njk' %}

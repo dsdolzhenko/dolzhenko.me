@@ -9,7 +9,7 @@ pictures:
   - path: img_5718.jpeg
 ---
 
-{% render "pictures", pictures: pictures, page: page %}
+{% include 'pictures.njk' %}
 
 There are at least four open farms within a 30-minute bike ride from us. This Saturday, we went to one of them for the first time since winter.
 
