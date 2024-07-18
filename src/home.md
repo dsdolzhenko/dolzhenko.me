@@ -6,7 +6,7 @@ permalink: /
 
 Welcome to my little corner of the internet, where I publish my stories, thoughts and ideas.
 
-As you can guess my name is Dmitry. I'm a father, husband, and software engineer living in The Netherlands, Amstelveen.
+I'm a father, husband, and software engineer living in The Netherlands, Amstelveen.
 
 In my free time, you'll often find me hanging out with family, experimenting with new coffee brewing methods, trying out new recipes, learning guitar, or diving into a good book. Occasionally, I like to tinker with tech stuff too.
 
