@@ -215,10 +215,6 @@ body.hay {
     color: var(--secondary-text-color);
 }
 
-.content figure {
-    margin: 1em;
-}
-
 .content header {
     margin-top: var(--header-margin);
     margin-bottom: var(--content-margin);
