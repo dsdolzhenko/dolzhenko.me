@@ -12,4 +12,4 @@ In my free time, you'll often find me hanging out with family, experimenting wit
 
 If you're interested what I'm currently up to, check out my [now](/now) page.
 
-I love reading other people's blogs, you can find my favorites on the [blogroll](/blogroll) page.
+I love reading other people's blogs, you can find my favourites on the [blogroll](/blogroll) page.
