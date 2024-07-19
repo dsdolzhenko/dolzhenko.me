@@ -126,6 +126,13 @@ blockquote > :last-child {
     margin-bottom: 0;
 }
 
+hr {
+    border: none;
+    border-bottom: 1px dotted var(--secondary-text-color);
+    width: 50%;
+    margin: 1em auto;
+}
+
 pre,
 code {
     border: 1px solid var(--primary-text-color);
