@@ -21,7 +21,7 @@ So I took a day off on Wednesday and that afternoon we headed to Zandvoort.
 This time the ride took a bit longer as we got a bit lost in Harlem thanks to Komoot.
 On the way back, however, we found another route around the city and managed to skip almost all traffic and traffic lights crossing the river on a little ferry.
 
-In the middle of the route, a few kilometres before Harlem, there is [a spot](https://osm.org/go/0E43xptrJ--) close to one of the Amsterdam Schipol's runaways where you can watch aeroplanes landing.
+In the middle of [the route](https://www.openstreetmap.org/directions?engine=graphhopper_bicycle&route=52.2798%2C4.8627%3B52.3728%2C4.5242#map=12/52.3095/4.7791), a few kilometres before Harlem, there is [a spot](https://osm.org/go/0E43xptrJ--) close to one of the Amsterdam Schipol's runaways where you can watch aeroplanes landing.
 We watched a few while taking a break for a snack and some water.
 
 Once we reached the seaside, we walked a bit along the coastline, took a few photos, and headed to the nearest cafe for lunch.
