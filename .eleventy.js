@@ -105,6 +105,21 @@ module.exports = function (eleventyConfig) {
         excerpt: true,
     });
 
+    // Exclude drafts from collections
+    eleventyConfig.addGlobalData(
+        "eleventyComputed.eleventyExcludeFromCollections",
+        function () {
+            return (data) => {
+                // Always exclude from non-watch/serve builds
+                if (data.draft) {
+                    return true;
+                }
+
+                return data.eleventyExcludeFromCollections;
+            };
+        }
+    );
+
     return {
         markdownTemplateEngine: "njk",
         dataTemplateEngine: "njk",
