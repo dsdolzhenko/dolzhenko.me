@@ -6,7 +6,7 @@ picture:
   caption: You served me well, but it's time to say goodbye
   alt: Output of the uptime command displaying 300 days of uptime
 tags:
-  - site
+  - meta
 ---
 
 {% picture "uptime.png", "Output of the uptime command displaying 300 days of uptime", "You served me well, but it's time to say goodbye" %}

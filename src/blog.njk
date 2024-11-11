@@ -1,10 +1,10 @@
 ---
-title: Blog
+title: Archive
 index: true
 ---
 
 {% extends "page.njk" %}
-{% from "macros.njk" import header, svg, time %}
+{% from "macros.njk" import time %}
 
 {% block content %}
     {% for year, posts in collections.blog | groupByYear %}
@@ -20,14 +20,4 @@ index: true
             {% endfor %}
         </ul>
     {% endfor %}
-{% endblock %}
-
-{% block footer %}
-    <div class="links">
-        <a href="/feed.xml">
-            {{ svg("rss") }}
-
-            Subscribe via RSS
-        </a>
-    </div>
 {% endblock %}

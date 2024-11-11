@@ -22,7 +22,6 @@ I like it because it provides a perfect balance of control and complexity.
 With it, I have control over every piece of the site and don't have to rely on a SaaS solution.
 
 I use a custom theme with minimal runtime dependencies.
-The only external dependency is *Source Serif 4* font, which is loaded from [fonts.bunny.net](https://fonts.bunny.net).
 
 All the content, including images, templates and styles, is in a git repository hosted at [codeberg.org](https://codeberg.org/dsdolzhenko/dolzhenko.me).
 

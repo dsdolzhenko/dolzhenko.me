@@ -1,16 +1,10 @@
 {% macro header(title, date) %}
-    <header>
-        <h1>{{ title | escape }}</h1>
-        {% if date %}
-            {{ time(date) }}
-        {% endif %}
-    </header>
-{% endmacro %}
-
-{% macro svg(id) %}
-    <svg viewBox="0 0 24 24" fill="none" class="icon">
-        <use xlink:href="#{{ id }}"></use>
-    </svg>
+    <h1>{{ title | escape }}</h1>
+    {% if date %}
+        <ul class="post-meta">
+            <li>{{ time(date) }}</li>
+        </ul>
+    {% endif %}
 {% endmacro %}
 
 {% macro time(value, format="LLL d, yyyy") %}

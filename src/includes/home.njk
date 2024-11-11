@@ -4,13 +4,10 @@
 
 {% block main %}
     <article class="content">
-        {{ header(title) }}
-
         {{ content | safe }}
-    </article>
 
-    <article>
         <h2>Recent blog posts</h2>
+
         <ul class="posts">
             {% for post in collections.blog | reverse | take(10) %}
                 <li>
@@ -23,14 +20,7 @@
                 </li>
             {% endfor %}
         </ul>
-    </article>
 
-    <article>
-        <h2>Contact me</h2>
-        <ul>
-            <li><a href="mailto:mailbox@dolzhenko.me">E-mail</a></li>
-            <li><a href="https://fosstodon.org/@dsdolzhenko">Mastodon</a></li>
-            <li><a href="https://www.linkedin.com/in/%F0%9F%91%BE-dmitry-dolzhenko-213087203/">LinkedIn</a></li>
-        </ul>
+        <p>More posts are in <a href="/blog">the archive</a>.</p>
     </article>
 {% endblock %}

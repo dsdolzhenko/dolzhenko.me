@@ -1,6 +1,6 @@
 {
-    "title": "Dmitry Dolzhenko",
-    "description": "Dmitry Dolzhenko's Personal Website",
+    "title": "dolzhenko.me",
+    "description": "Dmitry Dolzhenko's personal website",
     "url": "https://dolzhenko.me",
     "language": "en",
     "author": {
@@ -11,12 +11,12 @@
         "xml": {
             "filename": "feed.xml",
             "path": "/feed.xml",
-            "id": "https://dolzhenko.me"
+            "id": "https://dolzhenko.me/"
         },
         "json": {
             "filename": "feed.json",
             "path": "/feed.json",
-            "id": "https://dolzhenko.me"
+            "id": "https://dolzhenko.me/"
         }
     }
 }

@@ -12,19 +12,17 @@ title: My Favorite Personal Websites and Blogs
     </p>
 
     <p class="blogroll-discover">
-        Can"t pick? <a href="#">Open a random one!</a>
+        Can't pick? <a href="#">Open a random one!</a>
     </p>
 
     <div class="blogroll">
         {% set sortedBlogs = blogroll.blogs | sort(false, true, "title") %}
         {% for blog in sortedBlogs %}
-            <article>
-                <header>
-                    <h1>{{ blog.title }}</h1>
-                    <div><a href="{{ blog.url }}" target="_blank" class="blogroll--link">Website</a> • <a href="{{ blog.feed }}">RSS</a></div>
-                </header>
+            <div class="blogroll-item">
+                <h2 class="blogroll-item-title">{{ blog.title }}</h2>
+                <span><a href="{{ blog.url }}" target="_blank" class="blogroll--link">Website</a> • <a href="{{ blog.feed }}">RSS</a></span>
                 <p>{{ blog.description | safe }}</p>
-            </article>
+            </div>
         {% endfor %}
     </div>
 

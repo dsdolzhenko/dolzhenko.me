@@ -1,91 +1,136 @@
-html {
-    --primary-text-color: #586e75;
-    --secondary-text-color: #839496;
-    --link-text-color: cornflowerblue;
+:root {
+    --font-family: Verdana, Geneva, sans-serif;
+    --font-family-monospace: Consolas, Menlo, Monaco, Andale Mono WT, Andale Mono, Lucida Console, Lucida Sans Typewriter, DejaVu Sans Mono, Bitstream Vera Sans Mono, Liberation Mono, Nimbus Mono L, Courier New, Courier, monospace;
+
+    --background-color: #fff;
+
+    --text-color: #586e75;
+    --text-color-secondary: #839496;
+    --text-color-link: cornflowerblue;
 
     --main-bg-color: cornflowerblue;
-    --content-bg-color: #fff;
 
     --header-margin: 1em;
     --content-margin: 0.5em;
-
-    --font-family: "Source Serif 4", serif
 }
 
-body,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-pre,
-hr,
-dl,
-dd,
-ol,
-ul,
-figure {
-    margin: 0;
+* {
+    box-sizing: border-box;
+}
+
+@view-transition {
+    navigation: auto;
+}
+
+html,
+body {
     padding: 0;
-}
-
-html {
+    margin: 0 auto;
     font-family: var(--font-family);
-    font-weight: 400;
-    font-size: 20px;
-    text-rendering: optimizeLegibility;
-
-    color: var(--primary-text-color);
-    font-kerning: normal;
+    color: var(--text-color);
+    background-color: var(--background-color);
+}
+html {
+    overflow-y: scroll;
+}
+body {
+    max-width: 40em;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    margin-top: var(--header-margin);
-    margin-bottom: var(--content-margin);
+body.pistache {
+    --text-color-link: #95c58e;
 }
 
-p,
-blockquote,
-pre,
-ul,
-ol,
-dl,
-figure,
-.highlight {
-    margin-bottom: var(--content-margin);
+body.green {
+    --text-color-link: #47894b;
 }
 
+body.hay {
+    --text-color-link: #c25d0f;
+}
+
+p:last-child {
+    margin-bottom: 0;
+}
 p {
-    line-height: calc(1ex / 0.32);
-    word-break: break-word;
-    text-align: justify;
+    line-height: 1.5;
 }
 
-article {
-    font-size-adjust: 0.5;
+li {
+    line-height: 1.5;
 }
 
 a,
 a:active,
 a:visited {
-    color: var(--link-text-color);
+    color: var(--text-color-link);
     text-decoration: none;
 }
 
+main,
+footer {
+    padding: 1rem;
+}
+main :first-child {
+    margin-top: 0;
+}
+
 img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    vertical-align: middle;
     border-radius: 10px;
+}
+
+/* Header */
+
+header {
+    display: flex;
+    gap: 1em .5em;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1em;
+    border-bottom: 1px dashed var(--text-color-secondary);
+}
+.home-link {
+    font-size: 1em; /* 16px /16 */
+    font-weight: 700;
+}
+.home-link:link:not(:hover) {
+    text-decoration: none;
+}
+
+.rss-link {
+    background-image: url(/assets/img/feed-icon.png);
+    background-size: cover;
+    border-radius: none;
+    display: block;
+    width: 1em;
+    height: 1em;
+    text-indent: -9999px;
+}
+
+/* Post metadata */
+
+.post-meta {
+    display: inline-flex;
+    flex-wrap: wrap;
+    gap: .5em;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.post-meta time {
+    margin-right: 1em;
+    color: var(--text-color-secondary);
+}
+
+
+/* Content */
+
+.avatar {
+    float: right;
+    width: 10em;
+    margin-left: 1.5em;
 }
 
 figure > img {
@@ -96,12 +141,7 @@ figcaption {
     font-size: 0.9em;
     text-align: center;
     margin: 0.5em;
-    color: var(--secondary-text-color);
-}
-
-ul,
-ol {
-    margin-left: 30px;
+    color: var(--text-color-secondary);
 }
 
 li > ul,
@@ -109,27 +149,9 @@ li > ol {
     margin-bottom: 0;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    font-weight: 600;
-    font-size: 1em;
-}
-
-h1 {
-    font-size: 1.5em;
-}
-
-h2 {
-    font-size: 1.3em;
-}
-
 blockquote {
     color: var(--secondary-text-color);
-    border-left: 4px solid var(--primary-text-color);
+    border-left: 4px solid var(--text-color);
     padding-left: var(--content-margin);
     font-style: italic;
 }
@@ -139,14 +161,14 @@ blockquote > :last-child {
 
 hr {
     border: none;
-    border-bottom: 1px dotted var(--secondary-text-color);
+    border-bottom: 1px dashed var(--text-color-secondary);
     width: 50%;
     margin: 1em auto;
 }
 
 pre,
 code {
-    border: 1px solid var(--primary-text-color);
+    border: 1px solid var(--text-color);
     border-radius: 3px;
 }
 
@@ -164,90 +186,19 @@ pre > code {
     padding-left: 0;
 }
 
-body {
-    max-width: 770px;
-    margin-right: auto;
-    margin-left: auto;
-    padding: 15px;
+figure {
+    margin: 1em;
 }
 
-@media screen and (max-width: 800px) {
-    body {
-        max-width: 800px;
-    }
-}
-
-
-body.pistache {
-    /* https://www.color-hex.com/color-palette/53770 */
-    --main-bg-color: #cceec7;
-    --link-text-color: #95c58e;
-}
-
-body.green {
-    /* https://www.color-hex.com/color-palette/20674 */
-    --main-bg-color: #aad688;
-    --link-text-color: #47894b;
-}
-
-body.hay {
-    /* https://www.color-hex.com/color-palette/100642 */
-    --main-bg-color: #f6d36a;
-    --link-text-color: #c25d0f;
-}
-
-
-.site-header {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    margin-bottom: 3em;
-}
-
-.site-header h1 {
-    margin: 0;
-    font-size: 1em;
-}
-
-.site-header nav {
-    display: flex;
-    gap: 15px;
-}
-
-.site-header nav a.active {
-    border-bottom: 1px solid;
-    margin-bottom: -1px;
-}
-
-
-.content {
-    margin-bottom: 1em;
-}
-
-.content > header h1 {
-    font-size: 1.7em;
-    font-weight: 800;
-}
-
-.content > header time {
-    color: var(--secondary-text-color);
-}
-
-.content header {
-    margin-top: var(--header-margin);
-    margin-bottom: var(--content-margin);
-}
-
-.content header h1 {
-    margin: 0
-}
-
-.content figure {
-  margin: 1em;
+figure img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    vertical-align: middle;
 }
 
 .tags {
-    color: var(--secondary-text-color);
+    color: var(--text-color-secondary);
     font-weight: normal;
     font-style: italic;
     font-size: 0.9em;
@@ -260,7 +211,7 @@ body.hay {
     column-gap: 5px;
     row-gap: 5px;
 
-    margin: 10px 0 10px 0;
+    margin: 1.5em 0 1.5em 0;
 }
 
 .pictures li {
@@ -283,6 +234,7 @@ body.hay {
     object-position: left top;
 }
 
+/* Posts list */
 
 ul.posts {
     list-style-type: none;
@@ -309,73 +261,67 @@ ul.posts li span {
 }
 
 ul.posts li time {
-    color: var(--secondary-text-color);
+    color: var(--text-color-secondary);
 }
 
-.blogroll article {
+/* Blog roll */
 
+.blogroll-item {
+    margin-top: 1.5em;
+}
+
+.blogroll-item-title {
+    margin-bottom: 0;
 }
 
 .blogroll-discover {
     text-align: center;
 }
 
-.icon {
-    width: 1.2em;
-    height: 1.2em;
-    stroke: var(--primary-text-color);
-}
+/* Forms */
 
-.footer {
-    display: flex;
-    margin-bottom: 2em;
-    margin-top: 3em;
-}
-
-.footer .links {
+.form-input {
     display: flex;
     flex-direction: column;
-    line-height: 1.7;
+    margin-bottom: 1em;
 }
 
-.footer .links a {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.3em;
+.form-note {
+    color: var(--text-color-secondary);
+    font-style: italic;
+    font-size: 0.9em;
+    margin-top: 0.5em;
 }
 
-.footer .links .icon {
-    color: var(--primary-text-color);
+.hidden {
+    display: none;
 }
 
-
-article h1 {
-    font-size: 2.5em;
-    line-height: calc(1ex / 0.42);
-    margin: calc(1ex / 0.42) 0;
+form input,
+form textarea {
+    border: 1px solid var(--text-color-secondary);
 }
 
-article h2 {
-    font-size: 2em;
-    line-height: calc(1ex / 0.42);
-    margin: calc(1ex / 0.42) 0;
+form label {
+    margin-bottom: var(--content-margin);
 }
 
-article h3 {
-    font-size: 1.75em;
-    line-height: calc(1ex / 0.38);
-    margin: calc(1ex / 0.38) 0;
+form input,
+form textarea,
+form button {
+    padding: 1ch;
 }
 
-article h4 {
-    font-size: 1.5em;
-    line-height: calc(1ex / 0.37);
-    margin: calc(1ex / 0.37) 0;
+form button {
+    color: var(--background-color);
+    background-color: var(--text-color-link);
+    border: none;
+    border-radius: 5px;
+
+    cursor: pointer;
 }
 
-article p {
-    font-size: 1em;
-    line-height: calc(1ex / 0.32);
-    margin: calc(1ex / 0.32) 0;
+form textarea {
+    resize: none;
+    height: 200px;
 }
-
