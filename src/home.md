@@ -9,7 +9,7 @@ Hi there! Welcome to my little corner of the internet, where I publish my storie
 
 My name's Dmitry or Dima. I'm a father, husband, and software engineer living in The Netherlands, Amstelveen.
 
-In my free time, you'll often find me hanging out with family, experimenting with new coffee brewing methods, trying out new recipes, learning guitar, or diving into a good book. Occasionally, I like to tinker with tech stuff too.
+In my free time, you'll often find me hanging out with family, experimenting with new coffee brewing methods, trying out new recipes, running, or diving into a good book. Occasionally, I like to tinker with tech stuff too.
 
 📰 If you're interested what I'm currently up to, check out my [now](/now) page.
 
