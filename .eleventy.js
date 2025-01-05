@@ -90,7 +90,7 @@ module.exports = function (eleventyConfig) {
   <a href="${src}">
     ${imageHTML}
   </a>
-  ${ !caption ? "" : `<figcaption>${caption}</figcaption>` }
+  ${ !caption && !alt ? "" : `<figcaption>${caption || alt}</figcaption>` }
 </figure>`;
     });
 
