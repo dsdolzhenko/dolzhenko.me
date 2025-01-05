@@ -1,5 +1,6 @@
-post:
-        @./scripts/post.sh
+[positional-arguments]
+post *args='':
+        @./scripts/post.sh "$@"
 
 discard:
         @./scripts/discard.sh
