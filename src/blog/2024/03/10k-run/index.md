@@ -1,6 +1,8 @@
 ---
 date:  2024-03-20T10:00:00.000Z
 title: 10K at KPMG Lentemarathon in Amstelveen
+tags:
+  - running
 image: certificate.png
 pictures:
   - path: livj22423.jpeg
