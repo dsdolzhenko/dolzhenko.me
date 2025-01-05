@@ -78,6 +78,22 @@ img {
     border-radius: 10px;
 }
 
+.button,
+button {
+    color: var(--background-color);
+    background-color: var(--text-color-link);
+    border: none;
+    border-radius: 5px;
+
+    cursor: pointer;
+
+    padding: 1ch;
+}
+
+a.button {
+    text-decoration: none;
+}
+
 /* Header */
 
 header {
