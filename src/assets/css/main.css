@@ -64,7 +64,6 @@ a,
 a:active,
 a:visited {
     color: var(--text-color-link);
-    text-decoration: none;
 }
 
 main,
@@ -130,7 +129,7 @@ header {
 .avatar {
     float: right;
     width: 10em;
-    margin-left: 1.5em;
+    margin: 0 0 1em 1em;
 }
 
 figure > img {
@@ -232,6 +231,12 @@ figure img {
 
 .pictures .left-top img {
     object-position: left top;
+}
+
+.reply {
+  margin-top: 2em;
+  display: flex;
+  justify-content: center;
 }
 
 /* Posts list */
