@@ -1,8 +1,8 @@
-const pluginRss = require("@11ty/eleventy-plugin-rss");
-const Image = require("@11ty/eleventy-img");
+import pluginRss from "@11ty/eleventy-plugin-rss";
+import { EleventyRenderPlugin } from "@11ty/eleventy";
+import Image from "@11ty/eleventy-img";
 
-const _ = require("lodash");
-const { DateTime } = require("luxon");
+import { DateTime } from "luxon";
 
 function dateFilter(date, format) {
     if (date instanceof Date) {
@@ -19,23 +19,29 @@ function dateFilter(date, format) {
 }
 
 function groupByYearFilter(posts) {
-    return _.chain(posts)
-        .groupBy((post) => post.date.getFullYear())
-        .toPairs()
-        .reverse()
-        .value();
+    const groupedByYear = posts.reduce((acc, post) => {
+        const year = post.date.getFullYear();
+        if (!acc[year]) {
+            acc[year] = [];
+        }
+        acc[year].push(post);
+        return acc;
+    }, {});
+
+    return Object.entries(groupedByYear).reverse();
 }
 
 function whereFilter(posts, attr, value) {
-    return _.filter(posts, (post) => post[attr] === value);
+    return posts.filter((post) => post[attr] === value);
 }
 
 function takeFilter(posts, n) {
-    return _.take(posts, n)
+    return posts.slice(0, n);
 }
 
-module.exports = function (eleventyConfig) {
+export default function (eleventyConfig) {
     eleventyConfig.addPlugin(pluginRss);
+    eleventyConfig.addPlugin(EleventyRenderPlugin);
 
     eleventyConfig.addFilter("date", dateFilter);
     eleventyConfig.addFilter("groupByYear", groupByYearFilter);
