@@ -1,5 +1,5 @@
 {% macro header(title, date) %}
-    <h1>{{ title | escape }}</h1>
+    <h1 class="page-title">{{ title | escape }}</h1>
     {% if date %}
         <ul class="post-meta">
             <li>{{ time(date) }}</li>

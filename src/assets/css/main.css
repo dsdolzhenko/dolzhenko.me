@@ -8,8 +8,6 @@
     --text-color-secondary: #839496;
     --text-color-link: cornflowerblue;
 
-    --main-bg-color: cornflowerblue;
-
     --header-margin: 1em;
     --content-margin: 0.5em;
 }
@@ -75,12 +73,12 @@ main :first-child {
 }
 
 img {
-    border-radius: 10px;
+    border-radius: 5px;
 }
 
 .button,
 button {
-    color: var(--background-color);
+    color: var(--background-color) !important;
     background-color: var(--text-color-link);
     border: none;
     border-radius: 5px;
@@ -123,6 +121,10 @@ header {
     text-indent: -9999px;
 }
 
+.page-title {
+    margin: 0;
+}
+
 /* Post metadata */
 
 .post-meta {
@@ -131,7 +133,7 @@ header {
     gap: .5em;
     list-style: none;
     padding: 0;
-    margin: 0;
+    margin: 0 0 1em 0;
 }
 
 .post-meta time {
@@ -297,4 +299,50 @@ ul.posts li time {
 
 .blogroll-discover {
     text-align: center;
+}
+
+/* Media Card */
+
+.media-card {
+    padding: 1em;
+    margin: 0 -1em;
+    color: var(--background-color) !important;
+    background-color: var(--text-color-link);
+    border-radius: 5px;
+    overflow: auto;
+}
+
+.media-card a {
+   color: var(--background-color) !important;
+}
+
+.media-card-image {
+    width: 15em;
+    margin: 0 1em 1em 0;
+    float: left;
+}
+
+.media-card-image .picture {
+    margin: 0;
+}
+
+@media (width <= 40em) {
+    .media-card {
+        border-radius: 0;
+    }
+
+    .media-card-cover {
+        width: 100%;
+        margin-right: 0;
+    }
+}
+
+.media-card-meta {
+    margin: 0 0 1em 0;
+    padding: 0;
+    list-style: none;
+}
+
+.media-card-meta-i {
+    font-weight: bold;
 }

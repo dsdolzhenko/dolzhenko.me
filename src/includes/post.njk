@@ -1,5 +1,39 @@
 {% extends "page.njk" %}
 
+{% block content %}
+    {% if media %}
+        <div class="media-card">
+            <div class="media-card-image">
+                {% picture media.image, "", "" %}
+            </div>
+            <ul class="media-card-meta">
+                {% if media.author %}
+                    <li>✍️ <span class="media-card-meta-i">Author:</span> {{ media.author }}</li>
+                {% endif %}
+
+                {% if media.genre %}
+                    <li>🏷️ <span class="media-card-meta-i">Genre:</span> {{ media.genre }}</li>
+                {% endif %}
+
+                {% if media.published %}
+                    <li>🗓️ <span class="media-card-meta-i">Published:</span> {{ media.published | date("yyyy-MM-dd") }}</li>
+                {% endif %}
+
+                {% if media.link %}
+                    <li>🔗 <span class="media-card-meta-i">Link:</span> <a href="{{ media.link.url }}" target="_blank">{{ media.link.title }}</a></li>
+                {% endif %}
+            </ul>
+            <div class="media-card-description">
+                {{ media.description | default('**no description**') | renderContent('md') | safe }}
+            </div>
+        </div>
+
+        <hr>
+    {% endif %}
+
+    {{ content | safe }}
+{% endblock %}
+
 {% block main %}
     {{ super() }}
 
