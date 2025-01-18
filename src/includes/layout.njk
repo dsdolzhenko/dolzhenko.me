@@ -16,8 +16,8 @@
         <meta name="og:description" content="{{ page.excerpt | default(description) | default(site.description) | truncate(160) | escape | striptags }}">
         <meta name="og:type" content="website" />
         <meta name="og:url" content="{{ site.url }}{{ page.url | replace("index.html", "") | url }}">
-        {% if image %}
-            <meta name="og:image" content="{% og_image_uri page, image %}">
+        {% if image or media.image %}
+            <meta name="og:image" content="{% og_image_uri page, image | default(media.image) %}">
         {% endif %}
         <meta name="fediverse:creator" content="@dsdolzhenko@fosstodon.org"/>
 
