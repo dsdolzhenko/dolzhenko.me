@@ -272,7 +272,7 @@ ul.posts li {
 }
 
 ul.posts.now li {
-    grid-template-columns: 10ch 1fr;
+    grid-template-columns: 11ch 1fr;
 }
 
 ul.posts li:not(:first-of-type) {
