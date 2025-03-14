@@ -3,8 +3,6 @@ date:  2024-11-21T12:00+00:00
 title: A new sourdough starter
 tags:
  - cooking
- - recipe
- - sourdough
 ---
 
 Last year, around this time, I learned how to bake sourdough bread and began baking a loaf every other morning throughout the whole winter and into early spring.
