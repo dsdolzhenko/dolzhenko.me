@@ -8,8 +8,8 @@ tags:
 How was your week?
 
 
-- All my side project activities these weeks revolve around either tinkering with Emacs or my blog. This is fine, but I wish I had more time and energy to build or explore other things.
-- Work and personal life were quite uneventful this week. My schedule is starting to stabilize though, and I may soon have more time for things I've postponed for several months
+- All my side project activities these weeks revolve around either tinkering with Emacs or this blog. This is fine, but I wish I had more time and energy to build or explore other things.
+- Work and personal life were quite uneventful this week. My schedule is starting to stabilise though, and I may soon have more time for things I've postponed for a few months.
 
 Here are a few links to videos and blog posts that had my attention this week:
 
