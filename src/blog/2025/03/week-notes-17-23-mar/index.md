@@ -1,6 +1,8 @@
 ---
 date:  2025-03-23T23:00+00:00
 title: Week notes (17 - 23 Mar)
+tags:
+  - weeknotes
 ---
 
 ## Personal
