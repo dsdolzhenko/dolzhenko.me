@@ -8,7 +8,7 @@ tags:
 Here are the highlights of the passed week.
 
 - Thekla has recovered. It's astonishing how quickly a 3-year-old can go from a 40C fever and not being able to eat to being completely healthy within 24 hours.
-- I signed up for switching to another internet service provider. The new provider recently laid a fiber optic cable in our building. The price is a bit lower, and the speed is supposed to get higher. But what's more important, I hope the connection will be more stable than with the current provider. As a bonus, we'll get a PlayStation 5.
+- I signed up for switching to another internet service provider. The new provider recently laid a fibber optic cable in our building. The price is a bit lower, and the speed is supposed to get higher. But what's more important, I hope the connection will be more stable than with the current provider. As a bonus, we'll get a PlayStation 5.
 - Spring is coming to the Netherlands. The temperature reached 16C by the end of the week. We had an overnight trip to Zandvoort. We spent Friday evening at the beach. We followed the sunset enjoying delicious food with a glass of wine. In the morning, we headed to Zuid-Kennemerland National Park and hiked there until the afternoon.
 - We continue watching Severance, though I've reached a point where I no longer enjoy the show but still want to know how it all ends.
 - On Saturday we watched Anora. I have mixed feelings about it
