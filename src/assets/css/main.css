@@ -1,6 +1,9 @@
 :root {
     --font-family: Verdana, Geneva, sans-serif;
-    --font-family-monospace: Consolas, Menlo, Monaco, Andale Mono WT, Andale Mono, Lucida Console, Lucida Sans Typewriter, DejaVu Sans Mono, Bitstream Vera Sans Mono, Liberation Mono, Nimbus Mono L, Courier New, Courier, monospace;
+    --font-family-monospace:
+        Consolas, Menlo, Monaco, Andale Mono WT, Andale Mono, Lucida Console,
+        Lucida Sans Typewriter, DejaVu Sans Mono, Bitstream Vera Sans Mono, Liberation Mono,
+        Nimbus Mono L, Courier New, Courier, monospace;
 
     --background-color: #fff;
 
@@ -96,7 +99,7 @@ a.button {
 
 header {
     display: flex;
-    gap: 1em .5em;
+    gap: 1em 0.5em;
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
@@ -130,7 +133,7 @@ header {
 .post-meta {
     display: inline-flex;
     flex-wrap: wrap;
-    gap: .5em;
+    gap: 0.5em;
     list-style: none;
     padding: 0;
     margin: 0 0 1em 0;
@@ -140,7 +143,6 @@ header {
     margin-right: 1em;
     color: var(--text-color-secondary);
 }
-
 
 /* Content */
 
@@ -252,9 +254,9 @@ figure img {
 }
 
 .reply {
-  margin-top: 2em;
-  display: flex;
-  justify-content: center;
+    margin-top: 2em;
+    display: flex;
+    justify-content: center;
 }
 
 /* Posts list */
@@ -313,7 +315,7 @@ ul.posts li time {
 }
 
 .media-card a {
-   color: var(--background-color) !important;
+    color: var(--background-color) !important;
 }
 
 .media-card-image {

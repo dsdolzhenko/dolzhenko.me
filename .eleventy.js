@@ -8,12 +8,12 @@ function dateFilter(date, format) {
     if (date instanceof Date) {
         return DateTime.fromJSDate(date, {
             zone: "utc",
-            locale: "en"
+            locale: "en",
         }).toFormat(format);
     } else {
         return DateTime.fromISO(date, {
             zone: "utc",
-            locale: "en"
+            locale: "en",
         }).toFormat(format);
     }
 }
@@ -48,19 +48,22 @@ export default function (eleventyConfig) {
     eleventyConfig.addFilter("where", whereFilter);
     eleventyConfig.addFilter("take", takeFilter);
 
-    eleventyConfig.addShortcode("tags", function(value) {
-        let tags = value.split(",").map((tag) => "#" + tag.trim()).join(", ");
+    eleventyConfig.addShortcode("tags", function (value) {
+        let tags = value
+            .split(",")
+            .map((tag) => "#" + tag.trim())
+            .join(", ");
         return `<span class="tags">${tags}</span>`;
     });
 
-    eleventyConfig.addShortcode("og_image_uri", async function(page, src) {
+    eleventyConfig.addShortcode("og_image_uri", async function (page, src) {
         let { url } = page;
 
         let metadata = await Image("./src" + url + src, {
             widths: [600],
             formats: ["jpeg"],
             urlPath: url,
-            outputDir: `./dist/${url}`
+            outputDir: `./dist/${url}`,
         });
 
         return metadata.jpeg[0].url;
@@ -71,7 +74,7 @@ export default function (eleventyConfig) {
             widths: [300, 740],
             formats: ["avif", "jpeg"],
             urlPath: basePath,
-            outputDir: `./dist/${basePath}`
+            outputDir: `./dist/${basePath}`,
         });
 
         let imageAttributes = {
@@ -84,11 +87,11 @@ export default function (eleventyConfig) {
         return Image.generateHTML(metadata, imageAttributes);
     }
 
-    eleventyConfig.addShortcode("image", async function(src, alt, sizes) {
+    eleventyConfig.addShortcode("image", async function (src, alt, sizes) {
         return generateImageHTML(this.page.url, src, alt, sizes);
     });
 
-    eleventyConfig.addShortcode("picture", async function(src, alt, caption, sizes) {
+    eleventyConfig.addShortcode("picture", async function (src, alt, caption, sizes) {
         let imageHTML = await generateImageHTML(this.page.url, src, alt, sizes);
 
         return `
@@ -96,7 +99,7 @@ export default function (eleventyConfig) {
   <a href="${src}">
     ${imageHTML}
   </a>
-  ${ !caption && !alt ? "" : `<figcaption>${caption || alt}</figcaption>` }
+  ${!caption && !alt ? "" : `<figcaption>${caption || alt}</figcaption>`}
 </figure>`;
     });
 
@@ -112,19 +115,16 @@ export default function (eleventyConfig) {
     });
 
     // Exclude drafts from collections
-    eleventyConfig.addGlobalData(
-        "eleventyComputed.eleventyExcludeFromCollections",
-        function () {
-            return (data) => {
-                // Always exclude from non-watch/serve builds
-                if (data.draft) {
-                    return true;
-                }
+    eleventyConfig.addGlobalData("eleventyComputed.eleventyExcludeFromCollections", function () {
+        return (data) => {
+            // Always exclude from non-watch/serve builds
+            if (data.draft) {
+                return true;
+            }
 
-                return data.eleventyExcludeFromCollections;
-            };
-        }
-    );
+            return data.eleventyExcludeFromCollections;
+        };
+    });
 
     return {
         markdownTemplateEngine: "njk",
@@ -137,4 +137,4 @@ export default function (eleventyConfig) {
             output: "dist",
         },
     };
-};
+}
