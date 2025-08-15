@@ -3,11 +3,22 @@
   "description": "",
   "private": true,
   "type": "module",
+  "scripts": {
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
+  },
   "devDependencies": {
     "@11ty/eleventy": "3.0.0",
     "@11ty/eleventy-img": "5.0.0",
     "@11ty/eleventy-plugin-rss": "2.0.2",
+    "@eslint/js": "^9.33.0",
+    "eslint": "^9.33.0",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-prettier": "^5.5.4",
     "luxon": "3.5.0",
+    "prettier": "^3.6.2",
     "slugify-cli": "3.0.0"
   }
 }

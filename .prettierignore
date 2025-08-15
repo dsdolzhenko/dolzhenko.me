@@ -8,11 +8,15 @@
 **/node_modules
 
 # Ignore dist
-**/_site
+**/dist
 
 # Ignore *.md
 **/*.md
 
-# Ingore package.json
+# Ignore package files
 **/package.json
 **/package-lock.json
+
+# Ignore minified files
+*.min.js
+*.min.css
