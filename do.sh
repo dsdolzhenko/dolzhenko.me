@@ -13,16 +13,19 @@ Commands:
     serve           Start development server with hot reload (port 8080)
     build           Build the static site to dist/
     deploy          Deploy the website via rsync
-    post            Create a new blog post interactively
-                    Options: -c COLLECTION (default: blog)
+    post            Create a new blog post
+                    Usage: post [-c COLLECTION] [TITLE]
+                    If TITLE is not provided, prompts interactively
     now             Create/edit today's now page entry
     help            Show this help message
 
 Examples:
     ./do.sh serve                  # Start dev server
     ./do.sh build                  # Build site
-    ./do.sh post                   # Create new blog post
+    ./do.sh post                   # Create new blog post (interactive)
+    ./do.sh post "My Title"        # Create post with title
     ./do.sh post -c projects       # Create post in projects collection
+    ./do.sh post -c notes "Title"  # Create in notes with title
     ./do.sh now                    # Edit today's now page
     ./do.sh deploy                 # Deploy to server
 
@@ -31,22 +34,36 @@ EOF
 
 post() {
     COLLECTION="blog"
+
+    # Parse options with getopts
     while getopts c: FLAG
     do
         case "${FLAG}" in
             c) COLLECTION=${OPTARG};;
-            *) echo "Usage: ./do.sh post [-c COLLECTION]"
+            *) echo "Usage: ./do.sh post [-c COLLECTION] [TITLE]"
                exit 1
         esac
     done
 
+    # Shift past the options to get positional arguments
+    shift $((OPTIND-1))
+
+    # First remaining argument is the title
+    TITLE="${1:-}"
     echo "Collection: ${COLLECTION}"
     DATE=$(date -Iminutes -u)
     echo "Date: ${DATE}"
-    read -r -e -p "Title: " TITLE
+
+    if [[ -z "$TITLE" ]]; then
+        read -r -e -p "Title: " TITLE
+    else
+        echo "Title: ${TITLE}"
+    fi
+
     DEFAULT_SLUG=$(npx slugify-cli "${TITLE}")
     read -r -e -p "Slug [${DEFAULT_SLUG}]: " SLUG
     SLUG=${SLUG:-${DEFAULT_SLUG}}
+
     POST_DIR="$SCRIPT_DIR/src/${COLLECTION}/$(date +"%Y")/$(date +"%m")/$SLUG"
     POST="$POST_DIR/index.md"
 
@@ -78,7 +95,7 @@ case "${1:-help}" in
 
     post)
         shift
-        post
+        post "$@"
         ;;
 
     now)
