@@ -10,7 +10,7 @@ Personal website and blog.
 
 ## Usage
 
-- Run `just serve` to run the website locally
-- Run `just post` to create a new blog post
-- Run `just build` to build the website
-- Run `just deploy` to deploy the website
+- Run `./do.sh serve` to run the website locally
+- Run `./do.sh post` to create a new blog post
+- Run `./do.sh build` to build the website
+- Run `./do.sh deploy` to deploy the website
