@@ -50,6 +50,10 @@ body.hay {
     --text-color-link: #c25d0f;
 }
 
+h1, h2, h3, h4 {
+    font-size: 1em;
+}
+
 p:last-child {
     margin-bottom: 0;
 }
