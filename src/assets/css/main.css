@@ -79,10 +79,6 @@ main :first-child {
     margin-top: 0;
 }
 
-img {
-    border-radius: 5px;
-}
-
 .button,
 button {
     color: var(--background-color) !important;
@@ -210,7 +206,13 @@ pre > code {
 }
 
 figure {
-    margin: 1em;
+    margin: 1em -1em;
+}
+
+@media (width <= 40em) {
+    figure {
+        border-radius: 0;
+    }
 }
 
 figure img {
@@ -234,7 +236,7 @@ figure img {
     column-gap: 5px;
     row-gap: 5px;
 
-    margin: 1.5em 0 1.5em 0;
+    margin: 1.5em -1em;
 }
 
 .pictures li {
@@ -314,7 +316,6 @@ ul.posts li time {
     margin: 1em -1em;
     color: var(--background-color) !important;
     background-color: var(--text-color-link);
-    border-radius: 5px;
     overflow: auto;
 }
 
@@ -333,10 +334,6 @@ ul.posts li time {
 }
 
 @media (width <= 40em) {
-    .media-card {
-        border-radius: 0;
-    }
-
     .media-card-image {
         width: 100%;
         margin-right: 0;
