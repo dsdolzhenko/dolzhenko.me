@@ -311,7 +311,7 @@ ul.posts li time {
 
 .media-card {
     padding: 1em;
-    margin: 0 -1em;
+    margin: 1em -1em;
     color: var(--background-color) !important;
     background-color: var(--text-color-link);
     border-radius: 5px;
