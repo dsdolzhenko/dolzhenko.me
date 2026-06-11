@@ -90,7 +90,7 @@ case "${1:-help}" in
         ;;
 
     deploy)
-        rsync -razP --delete dist/ dolzhenko@dolzhenko.me:/var/www/dolzhenko.me
+        rsync -razP --delete dist/ dmitry@192.168.2.23:/var/www/html/dolzhenko.me
         ;;
 
     post)
