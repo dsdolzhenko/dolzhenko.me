@@ -55,4 +55,4 @@ What I didn't know is that it also supports animated image sequences with proper
 ffmpeg -i emacs-cape-file.mov -filter:v fps=5,scale=768:-1 emacs-cape-file.avif
 ```
 
-So with such a simple command I can get a short screencast as an animated picture I can add to a page using `<img>` tag.
+So with such a simple command I can get a short screencast as an animated picture (just _52K_ in size) I can add to a page using `<img>` tag.
