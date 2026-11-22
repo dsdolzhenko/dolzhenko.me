@@ -109,7 +109,7 @@ export default function (eleventyConfig) {
         "src/assets/img": "/assets/img",
         "src/assets/favicons": "/",
     });
-    eleventyConfig.addPassthroughCopy("src/**/*.(jp(e|)g|png|avif)");
+    eleventyConfig.addPassthroughCopy("src/**/*.(jp(e|)g|png|avif|css)");
     eleventyConfig.setFrontMatterParsingOptions({
         excerpt: true,
     });
